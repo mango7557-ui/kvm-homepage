@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>AI 소득공제 안내 · 한국벤처경영원</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<style>
+  :root{
+    --navy-900:#0A1F44; --navy-800:#0F2C5C; --navy-700:#16407F; --blue:#2F6BFF;
+    --sky:#E9F0FF; --ink:#101828; --ink-2:#475467; --ink-3:#98A2B3;
+    --line:#E6EAF2; --bg:#F5F7FB; --gold:#F5C542;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family:"Pretendard Variable",Pretendard,sans-serif;color:var(--ink);
+    background:
+      radial-gradient(1200px 600px at 85% 110%, #DCE6FA 0%, transparent 60%),
+      linear-gradient(180deg,#F3F6FC,#EEF2F9);
+    display:flex;align-items:center;justify-content:center;min-height:100vh;overflow:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ---------- widget ---------- */
+  .widget{
+    width:400px;height:min(680px,calc(100vh - 48px));
+    background:#fff;border-radius:24px;overflow:hidden;display:flex;flex-direction:column;
+    box-shadow:0 1px 0 rgba(10,31,68,.04),0 24px 60px -12px rgba(10,31,68,.28),0 0 0 1px rgba(10,31,68,.06);
+    transform-origin:bottom right;transition:transform .35s cubic-bezier(.2,.9,.3,1.2),opacity .25s;
+  }
+  .widget.closed{transform:scale(.6) translateY(40px);opacity:0;pointer-events:none}
+
+  /* header */
+  .hd{
+    position:relative;padding:20px 20px 22px;color:#fff;
+    background:linear-gradient(135deg,var(--navy-900) 0%,var(--navy-800) 55%,var(--navy-700) 100%);
+    overflow:hidden;flex-shrink:0;
+  }
+  .hd::before{ /* dot grid texture */
+    content:"";position:absolute;inset:0;opacity:.14;
+    background-image:radial-gradient(#fff 1px,transparent 1px);background-size:14px 14px;
+    mask-image:linear-gradient(110deg,transparent 35%,#000 100%);
+  }
+  .hd::after{
+    content:"";position:absolute;width:220px;height:220px;right:-70px;top:-110px;border-radius:50%;
+    background:radial-gradient(circle,rgba(47,107,255,.55),transparent 70%);
+  }
+  .hd-top{position:relative;z-index:1;display:flex;align-items:center;gap:12px}
+  .mark{
+    width:42px;height:42px;border-radius:13px;flex-shrink:0;display:grid;place-items:center;
+    background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);
+    font-weight:800;font-size:13px;letter-spacing:-.02em;position:relative;
+  }
+  .mark i{position:absolute;right:-2px;bottom:-2px;width:11px;height:11px;border-radius:50%;background:#34D399;border:2px solid var(--navy-800)}
+  .hd-title{flex:1;min-width:0}
+  .hd-title b{display:flex;align-items:center;gap:6px;font-size:16px;font-weight:700;letter-spacing:-.02em}
+  .badge{font-size:10px;font-weight:700;letter-spacing:.04em;padding:2px 6px;border-radius:5px;background:var(--gold);color:var(--navy-900)}
+  .hd-title span{display:block;font-size:12.5px;color:rgba(255,255,255,.68);margin-top:3px}
+  .icon-btn{
+    width:34px;height:34px;border-radius:10px;border:0;cursor:pointer;display:grid;place-items:center;
+    background:rgba(255,255,255,.1);color:#fff;transition:background .2s;
+  }
+  .icon-btn:hover{background:rgba(255,255,255,.2)}
+  .hd-tabs{position:relative;z-index:1;display:flex;gap:6px;margin-top:16px}
+  .hd-tabs span{
+    font-size:11.5px;font-weight:500;color:rgba(255,255,255,.82);padding:5px 10px;border-radius:999px;
+    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+  }
+
+  /* body */
+  .body{flex:1;overflow-y:auto;padding:20px 18px 12px;background:var(--bg);scroll-behavior:smooth}
+  .body::-webkit-scrollbar{width:6px}
+  .body::-webkit-scrollbar-thumb{background:#D0D6E2;border-radius:6px}
+  .body::-webkit-scrollbar-track{background:transparent}
+
+  .day{text-align:center;font-size:11px;color:var(--ink-3);margin-bottom:14px;font-weight:500}
+
+  .row{display:flex;gap:8px;margin-bottom:14px;animation:rise .35s ease both}
+  .row.me{justify-content:flex-end}
+  @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .av{width:28px;height:28px;border-radius:9px;background:var(--navy-800);color:#fff;font-size:10px;font-weight:800;display:grid;place-items:center;flex-shrink:0;margin-top:2px}
+  .bubble{
+    max-width:84%;padding:12px 14px;font-size:14px;line-height:1.6;letter-spacing:-.01em;
+    background:#fff;border:1px solid var(--line);border-radius:4px 16px 16px 16px;
+    box-shadow:0 1px 2px rgba(16,24,40,.04);text-wrap:pretty;word-break:keep-all;
+  }
+  .bubble strong{color:var(--navy-800)}
+  .bubble p+p{margin-top:8px}
+  .me .bubble{background:var(--navy-800);color:#fff;border-color:var(--navy-800);border-radius:16px 4px 16px 16px}
+  .src{display:flex;align-items:center;gap:5px;margin-top:10px;padding-top:9px;border-top:1px dashed var(--line);font-size:11.5px;color:var(--ink-3)}
+  .src svg{flex-shrink:0}
+
+  /* welcome */
+  .hello h2{font-size:15px;font-weight:700;margin-bottom:4px;letter-spacing:-.02em}
+  .hello p{color:var(--ink-2);font-size:13.5px}
+  .topics{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:12px}
+  .topic{
+    border:1px solid var(--line);border-radius:12px;padding:10px 8px;background:var(--bg);cursor:pointer;
+    text-align:left;font:inherit;transition:all .2s;
+  }
+  .topic:hover{border-color:var(--blue);background:var(--sky)}
+  .topic em{display:block;font-style:normal;font-size:10.5px;font-weight:700;color:var(--blue);margin-bottom:3px}
+  .topic b{display:block;font-size:12.5px;font-weight:600;line-height:1.35;color:var(--ink)}
+
+  .sugg-label{font-size:11.5px;font-weight:600;color:var(--ink-3);margin:4px 0 8px 36px}
+  .chips{display:flex;flex-direction:column;align-items:flex-start;gap:6px;margin:0 0 14px 36px}
+  .chip{
+    font:inherit;font-size:13px;font-weight:500;color:var(--navy-800);cursor:pointer;
+    background:#fff;border:1px solid #D5DEEE;border-radius:999px;padding:8px 14px 8px 12px;
+    display:inline-flex;align-items:center;gap:6px;transition:all .2s;text-align:left;
+  }
+  .chip:hover{background:var(--navy-800);color:#fff;border-color:var(--navy-800);transform:translateX(2px)}
+  .chip svg{opacity:.55}
+
+  .typing{display:inline-flex;gap:4px;padding:4px 2px}
+  .typing i{width:6px;height:6px;border-radius:50%;background:var(--ink-3);animation:blink 1.2s infinite}
+  .typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+  @keyframes blink{0%,60%,100%{opacity:.3;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+
+  /* composer */
+  .ft{padding:12px 16px 14px;background:#fff;border-top:1px solid var(--line);flex-shrink:0}
+  .composer{
+    display:flex;align-items:flex-end;gap:8px;padding:6px 6px 6px 14px;border-radius:16px;
+    border:1.5px solid var(--line);background:#fff;transition:border-color .2s,box-shadow .2s;
+  }
+  .composer:focus-within{border-color:var(--blue);box-shadow:0 0 0 4px rgba(47,107,255,.12)}
+  .composer textarea{
+    flex:1;border:0;outline:0;resize:none;font:inherit;font-size:14px;line-height:1.5;
+    padding:7px 0;max-height:96px;color:var(--ink);background:transparent;
+  }
+  .composer textarea::placeholder{color:var(--ink-3)}
+  .send{
+    width:38px;height:38px;border-radius:12px;border:0;cursor:pointer;flex-shrink:0;
+    background:var(--navy-800);color:#fff;display:grid;place-items:center;transition:all .2s;
+  }
+  .send:hover{background:var(--blue)}
+  .send:disabled{background:#E4E8F0;color:var(--ink-3);cursor:default}
+  .note{display:flex;gap:6px;margin-top:10px;font-size:11px;line-height:1.5;color:var(--ink-3);word-break:keep-all}
+  .note svg{flex-shrink:0;margin-top:2px}
+
+  /* launcher dock */
+  .dock{position:fixed;right:28px;bottom:28px;display:flex;flex-direction:column;gap:10px;align-items:center}
+  .fab{
+    width:56px;height:56px;border-radius:50%;border:0;cursor:pointer;display:grid;place-items:center;
+    box-shadow:0 10px 24px -6px rgba(10,31,68,.35);transition:transform .2s;
+  }
+  .fab:hover{transform:translateY(-2px)}
+  .fab.ai{background:linear-gradient(135deg,var(--navy-800),var(--blue));color:#fff;position:relative}
+  .fab.ai::after{content:"AI";position:absolute;top:-2px;right:-2px;font-size:9px;font-weight:800;background:var(--gold);color:var(--navy-900);padding:2px 5px;border-radius:6px}
+  .fab.sm{width:46px;height:46px;background:#fff;color:var(--navy-800)}
+  .fab.kakao{background:#FEE500;color:#191919}
+  .stage{position:relative;display:flex;align-items:flex-end;gap:24px;margin-right:60px}
+</style>
+</head>
+<body>
+
+<div class="stage">
+<section class="widget" id="widget" data-screen-label="AI 소득공제 챗봇">
+  <header class="hd">
+    <div class="hd-top">
+      <div class="mark">KVM<i></i></div>
+      <div class="hd-title">
+        <b>AI 소득공제 안내 <span class="badge">BETA</span></b>
+        <span>검수된 FAQ·제도 자료를 근거로 답변합니다</span>
+      </div>
+      <button class="icon-btn" id="resetBtn" title="대화 초기화" aria-label="대화 초기화">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+      </button>
+      <button class="icon-btn" id="closeBtn" title="닫기" aria-label="닫기">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="hd-tabs">
+      <span>벤처투자 소득공제</span><span>개인투자조합</span><span>투자기업</span>
+    </div>
+  </header>
+
+  <div class="body" id="body"></div>
+
+  <footer class="ft">
+    <form class="composer" id="form">
+      <textarea id="input" rows="1" placeholder="궁금한 내용을 입력하세요"></textarea>
+      <button class="send" id="send" type="submit" disabled aria-label="보내기">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      </button>
+    </form>
+    <div class="note">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>
+      AI 답변은 참고용이며 세무 자문이 아닙니다. 실제 공제액은 개인 소득 및 투자 조건에 따라 달라질 수 있습니다.
+    </div>
+  </footer>
+</section>
+</div>
+
+<div class="dock">
+  <button class="fab sm" title="전화 상담" aria-label="전화 상담">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+  </button>
+  <button class="fab sm kakao" title="카카오톡 상담" aria-label="카카오톡 상담">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.8 1.9 5.3 4.7 6.7l-1 3.6c-.1.3.3.6.6.4l4.2-2.8c.5.1 1 .1 1.5.1 5.5 0 10-3.6 10-8S17.5 3 12 3z"/></svg>
+  </button>
+  <button class="fab ai" id="fab" title="AI 소득공제 안내" aria-label="AI 챗봇 열기">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const body = $('#body'), input = $('#input'), send = $('#send'), widget = $('#widget');
+let history = [], busy = false;
+
+const SUGGESTIONS = [
+  '3,000만원 투자하면 얼마나 돌려받나요?',
+  '국민성장펀드와 뭐가 달라요?',
+  '개인투자조합으로 투자해도 공제되나요?',
+];
+const TOPICS = [
+  ['소득공제','공제율·한도 계산','벤처투자 소득공제율과 한도를 구간별로 알려주세요.'],
+  ['개인투자조합','조합 가입·요건','개인투자조합 투자 시 소득공제 요건을 알려주세요.'],
+  ['투자기업','대상 기업 확인','소득공제 대상이 되는 투자기업 요건은 무엇인가요?'],
+];
+
+const SYSTEM = `당신은 한국벤처경영원의 'AI 소득공제 안내' 상담원입니다. 벤처투자 소득공제(조세특례제한법 제16조), 개인투자조합, 벤처기업·창업기업 투자에 대해 한국어로 친절하고 간결하게 답합니다.
+기본 사실: 벤처기업 등에 직접 또는 개인투자조합을 통해 투자 시 투자금액 3천만원 이하분 100%, 3천만원 초과~5천만원 이하분 70%, 5천만원 초과분 30% 소득공제(종합소득금액의 50% 한도). 투자일로부터 3년 이상 보유 요건이 있습니다. 공제 연도는 투자연도 또는 이후 2년 중 선택 가능.
+실제 환급액은 한계세율에 따라 달라지므로 예시로 설명하고, 확실하지 않은 최신 제도(예: 국민성장펀드 세부 조건)는 단정하지 말고 공식 공고 확인을 권하세요. 답변은 3~6문장, 핵심 수치는 **굵게** 표시. 마크다운 표나 제목은 쓰지 마세요.`;
+
+function esc(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
+function fmt(t){
+  return esc(t.trim()).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
+    .split(/\n{2,}/).map(p=>'<p>'+p.replace(/\n/g,'<br>')+'</p>').join('');
+}
+function scroll(){ requestAnimationFrame(()=>body.scrollTop = body.scrollHeight) }
+
+function addRow(role, html){
+  const r = document.createElement('div');
+  r.className = 'row' + (role==='me'?' me':'');
+  r.innerHTML = (role==='me'?'':'<div class="av">KVM</div>') + `<div class="bubble">${html}</div>`;
+  body.appendChild(r); scroll(); return r;
+}
+
+function welcome(){
+  body.innerHTML = '<div class="day">오늘</div>';
+  const r = addRow('bot', `
+    <div class="hello">
+      <h2>안녕하세요, 한국벤처경영원입니다.</h2>
+      <p>벤처투자 소득공제, 개인투자조합, 투자기업에 대해 무엇이든 물어보세요.</p>
+    </div>
+    <div class="topics">${TOPICS.map((t,i)=>`<button class="topic" data-q="${t[2]}"><em>0${i+1} ${t[0]}</em><b>${t[1]}</b></button>`).join('')}</div>`);
+  r.querySelector('.bubble').style.maxWidth='calc(100% - 36px)';
+  const lab = document.createElement('div'); lab.className='sugg-label'; lab.textContent='자주 묻는 질문';
+  const chips = document.createElement('div'); chips.className='chips'; chips.id='chips';
+  chips.innerHTML = SUGGESTIONS.map(s=>`<button class="chip" data-q="${s}">${s}<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></button>`).join('');
+  body.append(lab, chips);
+}
+
+body.addEventListener('click', e=>{
+  const b = e.target.closest('[data-q]'); if(b) ask(b.dataset.q);
+});
+
+async function ask(q){
+  if(busy || !q.trim()) return;
+  busy = true; input.value=''; autosize(); send.disabled = true;
+  addRow('me', esc(q));
+  history.push({role:'user', content:q});
+  const t = addRow('bot','<span class="typing"><i></i><i></i><i></i></span>');
+  let ans;
+  try{
+    ans = await window.genspark.complete({messages:[{role:'user',content:SYSTEM+'\n\n[이전 대화]\n'+history.slice(-6,-1).map(m=>(m.role==='user'?'질문: ':'답변: ')+m.content).join('\n')+'\n\n질문: '+q}]});
+  }catch(err){ ans = '죄송합니다. 일시적으로 답변을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.'; }
+  history.push({role:'assistant', content:ans});
+  t.querySelector('.bubble').innerHTML = fmt(ans) +
+    `<div class="src"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/></svg>근거 · 조세특례제한법 제16조, 한국벤처경영원 FAQ</div>`;
+  scroll(); busy = false; send.disabled = !input.value.trim();
+}
+
+function autosize(){ input.style.height='auto'; input.style.height=Math.min(input.scrollHeight,96)+'px'; }
+input.addEventListener('input',()=>{ autosize(); send.disabled = busy || !input.value.trim(); });
+input.addEventListener('keydown',e=>{ if(e.key==='Enter' && !e.shiftKey && !e.isComposing){ e.preventDefault(); ask(input.value);} });
+$('#form').addEventListener('submit',e=>{ e.preventDefault(); ask(input.value); });
+$('#closeBtn').onclick = ()=> widget.classList.add('closed');
+$('#fab').onclick = ()=> widget.classList.toggle('closed');
+$('#resetBtn').onclick = ()=>{ history=[]; welcome(); };
+
+welcome();
+</script>
+</body>
+</html>

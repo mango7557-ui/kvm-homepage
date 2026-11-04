@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>벤처투자 소득공제 안내 | 한국벤처경영원</title>
+<meta name="description" content="한국벤처경영원은 벤처투자 소득공제 정보·컨설팅·투자설명회를 제공합니다. 벤처투자 3,000만원까지 100% 소득공제, 5,000만원 투자 시 88%(4,400만원) 소득공제.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<style>
+:root{
+  --navy:#0d1233; --navy-2:#161d4a; --violet:#5a45d6; --lime:#84cc16; --lime-soft:#ecf8d6;
+  --ink:#12152b; --ink-2:#4a4f68; --ink-3:#8a8fa6; --line:#e3e5ec; --paper:#f7f8f4; --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'Pretendard Variable',Pretendard,sans-serif;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;line-height:1.6;word-break:keep-all}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.num{font-variant-numeric:tabular-nums}
+.tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.02em;padding:3px 9px;border-radius:4px;background:var(--lime-soft);color:#3f6a06}
+.label{font-size:13px;font-weight:600;color:var(--violet);letter-spacing:.04em}
+h2.sec{font-size:clamp(28px,3.2vw,40px);line-height:1.25;letter-spacing:-.025em;font-weight:700;text-wrap:pretty}
+.lede{font-size:18px;color:var(--ink-2);max-width:720px;text-wrap:pretty}
+section{padding:96px 0}
+.updated{font-size:12.5px;color:var(--ink-3)}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(13,18,51,.94);backdrop-filter:blur(10px);color:#fff}
+.hd{display:flex;align-items:center;height:64px;gap:32px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;letter-spacing:-.02em;white-space:nowrap}
+.logo i{width:26px;height:26px;border-radius:6px;background:var(--lime);display:grid;place-items:center;font-style:normal;font-size:11px;font-weight:800;color:var(--navy)}
+.logo small{font-weight:500;color:rgba(255,255,255,.5);font-size:12px;margin-left:2px}
+nav.gnb{display:flex;gap:26px;font-size:14.5px;color:rgba(255,255,255,.75);flex:1}
+nav.gnb a:hover{color:#fff}
+.hd-cta{background:var(--lime);color:var(--navy);font-weight:700;font-size:14px;padding:9px 16px;border-radius:8px;white-space:nowrap}
+.hd-cta:hover{background:#9adf2c}
+
+/* hero */
+.hero{background:radial-gradient(120% 90% at 85% 0%,#3a2fa0 0%,transparent 55%),linear-gradient(160deg,var(--navy) 0%,#1b1760 100%);color:#fff;padding:88px 0 0;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:64px;align-items:end}
+.hero .label{color:var(--lime)}
+.hero h1{font-size:clamp(38px,5vw,64px);line-height:1.15;letter-spacing:-.035em;font-weight:800;margin:18px 0 28px;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--lime)}
+.std{border-left:3px solid var(--lime);padding:4px 0 4px 18px;font-size:19px;line-height:1.55;color:rgba(255,255,255,.92);max-width:600px}
+.std b{color:#fff}
+.hero-cta{display:flex;gap:12px;margin:36px 0 72px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15.5px;padding:14px 22px;border-radius:10px;transition:.2s}
+.btn.lime{background:var(--lime);color:var(--navy)}
+.btn.lime:hover{background:#9adf2c}
+.btn.ghost{border:1px solid rgba(255,255,255,.3);color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.08)}
+.btn.dark{background:var(--navy);color:#fff}
+.btn.dark:hover{background:var(--violet)}
+.facts{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-bottom:0;border-radius:16px 16px 0 0;padding:28px 30px}
+.facts dl{display:grid;grid-template-columns:1fr 1fr;gap:22px 24px}
+.facts dt{font-size:13px;color:rgba(255,255,255,.55)}
+.facts dd{font-size:28px;font-weight:700;letter-spacing:-.02em;margin-top:2px}
+.facts dd small{font-size:14px;font-weight:500;color:rgba(255,255,255,.6);margin-left:3px}
+.facts .src{grid-column:1/-1;font-size:12px;color:rgba(255,255,255,.45);border-top:1px solid rgba(255,255,255,.1);padding-top:14px}
+
+/* answer box */
+.answer{background:#fff;border-bottom:1px solid var(--line);padding:56px 0}
+.ans-grid{display:grid;grid-template-columns:220px 1fr;gap:48px}
+.ans-q{font-size:15px;font-weight:700;color:var(--ink-2)}
+.ans-q span{display:block;font-size:12px;color:var(--ink-3);font-weight:500;margin-top:6px}
+.ans-a p{font-size:20px;line-height:1.7;letter-spacing:-.01em;max-width:860px}
+.ans-a p+p{font-size:16px;color:var(--ink-2);margin-top:14px}
+.ans-a mark{background:linear-gradient(transparent 62%,#d9f3b0 62%);color:inherit}
+
+/* rate table */
+.rate-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px}
+table{width:100%;border-collapse:collapse;font-size:16px}
+th,td{text-align:left;padding:15px 16px;border-bottom:1px solid var(--line)}
+th{font-size:13px;color:var(--ink-3);font-weight:600;background:#f1f2ee}
+td.r{text-align:right;font-weight:700}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px}
+.card h3{font-size:19px;letter-spacing:-.02em;margin-bottom:6px}
+.card p{color:var(--ink-2);font-size:15px}
+.cmp{margin-top:22px;display:grid;gap:14px}
+.cmp-row{display:grid;grid-template-columns:130px 1fr 64px;gap:12px;align-items:center;font-size:14px}
+.bar{height:26px;border-radius:5px;background:#eef0f4;position:relative;overflow:hidden}
+.bar i{position:absolute;inset:0 auto 0 0;border-radius:5px}
+.note{font-size:13px;color:var(--ink-3);margin-top:16px;line-height:1.6}
+
+/* simulator */
+.sim{background:var(--navy);color:#fff}
+.sim .label{color:var(--lime)}
+.sim .lede{color:rgba(255,255,255,.7)}
+.sim-box{margin-top:44px;display:grid;grid-template-columns:1fr 1.1fr;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.12)}
+.sim-in{padding:36px;background:var(--navy-2)}
+.field{margin-bottom:30px}
+.field label{display:flex;justify-content:space-between;font-size:14.5px;color:rgba(255,255,255,.75);margin-bottom:12px}
+.field label b{color:#fff;font-size:20px;letter-spacing:-.02em}
+input[type=range]{width:100%;accent-color:var(--lime);height:6px}
+.presets{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.presets button{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.85);font:inherit;font-size:13px;padding:6px 11px;border-radius:6px;cursor:pointer}
+.presets button:hover,.presets button.on{border-color:var(--lime);color:var(--lime)}
+.sim-out{padding:36px;background:linear-gradient(160deg,#241c7a,#171456)}
+.out-big{font-size:14px;color:rgba(255,255,255,.65)}
+.out-big b{display:block;font-size:52px;font-weight:800;letter-spacing:-.035em;color:var(--lime);line-height:1.15;margin-top:4px}
+.out-list{margin-top:26px;border-top:1px solid rgba(255,255,255,.14)}
+.out-list div{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:15px}
+.out-list span{color:rgba(255,255,255,.6)}
+.sim-txt{margin-top:20px;font-size:14px;color:rgba(255,255,255,.8);background:rgba(0,0,0,.18);border-radius:10px;padding:14px 16px;line-height:1.65}
+.sim .note{color:rgba(255,255,255,.45)}
+
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;counter-reset:f}
+.flow li{list-style:none;padding:24px 24px 24px 0;border-top:2px solid var(--ink);position:relative}
+.flow li::before{counter-increment:f;content:"0" counter(f);font-size:13px;font-weight:700;color:var(--violet);display:block;margin-bottom:12px}
+.flow h4{font-size:18px;letter-spacing:-.02em;margin-bottom:6px}
+.flow p{font-size:14.5px;color:var(--ink-2)}
+
+/* group */
+.group{background:#fff}
+.org{margin-top:48px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.org-top{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:8px}
+.node{border:1px solid var(--line);border-radius:12px;padding:20px 22px;background:var(--paper)}
+.node .tier{font-size:12px;font-weight:700;color:var(--ink-3)}
+.node h4{font-size:18px;letter-spacing:-.02em;margin:4px 0}
+.node p{font-size:14px;color:var(--ink-2)}
+.node.kvm{background:var(--navy);color:#fff;border-color:var(--navy)}
+.node.kvm p,.node.kvm .tier{color:rgba(255,255,255,.65)}
+.co{border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;background:#fff;transition:.2s}
+.co:hover{border-color:var(--ink);transform:translateY(-2px)}
+.co .kind{font-size:12.5px;font-weight:700;color:var(--violet)}
+.co h4{font-size:21px;letter-spacing:-.025em;margin:6px 0 10px}
+.co p{font-size:14.5px;color:var(--ink-2);flex:1}
+.co .rel{font-size:13px;color:var(--ink-3);border-top:1px solid var(--line);padding-top:12px;margin-top:16px}
+.co .go{font-size:14px;font-weight:700;margin-top:12px;display:flex;justify-content:space-between}
+.co .st{font-size:11.5px;font-weight:600;padding:2px 7px;border-radius:4px;background:#eef0f4;color:var(--ink-2)}
+
+/* faq */
+.faq-head{display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap}
+.progress{min-width:260px}
+.progress .pb{height:8px;background:#e4e6dd;border-radius:4px;overflow:hidden;margin-top:8px}
+.progress .pb i{display:block;height:100%;background:var(--lime)}
+.progress small{font-size:13px;color:var(--ink-2)}
+.faq-tools{display:flex;gap:10px;margin:36px 0 18px;flex-wrap:wrap;align-items:center}
+.chip{font:inherit;font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink-2);cursor:pointer}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chip em{font-style:normal;font-weight:500;opacity:.6;margin-left:4px}
+.search{margin-left:auto;display:flex;align-items:center;border:1px solid var(--line);background:#fff;border-radius:10px;padding:0 14px;min-width:280px}
+.search input{border:0;outline:0;font:inherit;font-size:15px;padding:11px 0;width:100%;background:transparent}
+.faq-list{border-top:2px solid var(--ink)}
+details{border-bottom:1px solid var(--line);background:transparent}
+summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:110px 1fr 90px 24px;gap:18px;align-items:center;padding:20px 4px}
+summary::-webkit-details-marker{display:none}
+summary .cat{font-size:13px;font-weight:600;color:var(--violet)}
+summary .q{font-size:17px;font-weight:600;letter-spacing:-.015em}
+summary .rv{font-size:12px;text-align:right;color:var(--ink-3)}
+summary .rv.ok{color:#4d7c0f}
+summary .pm{font-size:20px;color:var(--ink-3);transition:.2s;text-align:center}
+details[open] summary .pm{transform:rotate(45deg)}
+.a{padding:0 4px 26px 128px;max-width:900px;font-size:15.5px;color:var(--ink-2);line-height:1.75}
+.a .meta{margin-top:10px;font-size:12.5px;color:var(--ink-3)}
+.empty{padding:40px 0;text-align:center;color:var(--ink-3)}
+
+/* media */
+.media{background:#fff}
+.media-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;margin-top:44px}
+.vid-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.vid .th{aspect-ratio:16/9;border-radius:10px;background:repeating-linear-gradient(135deg,#eceee6 0 8px,#f4f5ef 8px 16px);display:grid;place-items:center;font-size:12px;color:var(--ink-3);font-family:ui-monospace,monospace}
+.vid p{font-size:13.5px;margin-top:8px;font-weight:600;line-height:1.4}
+.vid small{font-size:12px;color:var(--ink-3)}
+.stack{display:grid;gap:14px}
+.stack .card{padding:22px 24px}
+.stack .card .row{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.linkrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.linkrow a{font-size:13px;padding:6px 11px;border:1px solid var(--line);border-radius:6px;color:var(--ink-2)}
+.linkrow a:hover{border-color:var(--ink);color:var(--ink)}
+
+/* people */
+.people{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.person{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+.person .ph{width:56px;height:56px;border-radius:50%;background:repeating-linear-gradient(135deg,#eceee6 0 6px,#f4f5ef 6px 12px);margin-bottom:14px}
+.person h4{font-size:17px}
+.person .role{font-size:13px;color:var(--violet);font-weight:600}
+.person p{font-size:13.5px;color:var(--ink-2);margin-top:8px}
+
+/* contact */
+.contact{background:var(--paper)}
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:44px}
+form.cf{background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px;display:grid;gap:16px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cf label{font-size:13.5px;font-weight:600;color:var(--ink-2);display:grid;gap:6px}
+.cf input,.cf select,.cf textarea{font:inherit;font-size:15px;padding:12px 13px;border:1px solid var(--line);border-radius:9px;background:var(--paper);outline:0}
+.cf input:focus,.cf select:focus,.cf textarea:focus{border-color:var(--violet);background:#fff}
+.cf .agree{display:flex;gap:8px;align-items:flex-start;font-weight:500;font-size:13px;color:var(--ink-2)}
+.cf button{border:0;cursor:pointer;justify-content:center}
+.info dl{display:grid;grid-template-columns:110px 1fr;border-top:2px solid var(--ink)}
+.info dt,.info dd{padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}
+.info dt{color:var(--ink-3);font-weight:600;font-size:14px}
+.ph-txt{color:#b45309;background:#fff7e6;padding:1px 6px;border-radius:4px;font-size:13.5px}
+.map{margin-top:18px;aspect-ratio:16/8;border-radius:12px;background:repeating-linear-gradient(135deg,#eceee6 0 8px,#f4f5ef 8px 16px);display:grid;place-items:center;color:var(--ink-3);font-size:13px;font-family:ui-monospace,monospace}
+
+/* footer */
+footer{background:var(--navy);color:rgba(255,255,255,.65);padding:64px 0 36px;font-size:14px}
+.ft{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px}
+footer h5{color:#fff;font-size:14px;margin-bottom:14px}
+footer li{list-style:none;padding:4px 0}
+footer li a:hover{color:var(--lime)}
+.legal{margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);font-size:12.5px;line-height:1.8;color:rgba(255,255,255,.45)}
+
+@media(max-width:960px){
+  nav.gnb{display:none}
+  .hd{justify-content:space-between}
+  .hero-grid,.rate-grid,.sim-box,.media-grid,.ct-grid,.ans-grid{grid-template-columns:1fr}
+  .ans-grid{gap:14px}
+  .flow,.org,.people{grid-template-columns:1fr 1fr}
+  .ft{grid-template-columns:1fr 1fr}
+  summary{grid-template-columns:1fr 24px}
+  summary .cat,summary .rv{display:none}
+  .a{padding-left:4px}
+  .search{margin-left:0;min-width:0;width:100%}
+}
+@media(max-width:560px){
+  .wrap{padding:0 20px}
+  section{padding:68px 0}
+  .flow,.org,.people,.org-top,.f2,.vid-grid{grid-template-columns:1fr}
+  .out-big b{font-size:40px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a href="#top" class="logo"><i>KVM</i>한국벤처경영원</a>
+    <nav class="gnb">
+      <a href="#guide">소득공제 안내</a>
+      <a href="#simulator">세금 시뮬레이터</a>
+      <a href="#assets">투자 자산군</a>
+      <a href="#faq">FAQ</a>
+      <a href="#media">설명회·리치레터</a>
+      <a href="#about">전문가</a>
+    </nav>
+    <a href="#contact" class="hd-cta">상담 신청</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" data-screen-label="01 Hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="label">벤처투자 소득공제 정보·컨설팅</div>
+      <h1>내 세율만큼 돌려받는<br><em>벤처투자 소득공제</em></h1>
+      <p class="std">벤처투자 <b>3,000만원까지 100% 소득공제</b>,<br>5,000만원 투자 시 <b>88%(4,400만원) 소득공제</b></p>
+      <div class="hero-cta">
+        <a class="btn lime" href="#simulator">내 환급액 계산하기 →</a>
+        <a class="btn ghost" href="#faq">자주 묻는 질문 보기</a>
+      </div>
+    </div>
+    <div class="facts">
+      <dl>
+        <div><dt>누적 투자 소개액</dt><dd class="num">1,852<small>억원</small></dd></div>
+        <div><dt>최대 환급률(한계세율)</dt><dd class="num">49.5<small>%</small></dd></div>
+        <div><dt>100% 공제 구간</dt><dd class="num">3,000<small>만원까지</small></dd></div>
+        <div><dt>게시 FAQ</dt><dd class="num" id="faqCountHero">0<small>개</small></dd></div>
+        <div class="src">누적 투자 기준일: <span class="ph-txt">[정보 통일 시트 기준일 기재]</span> · 한계세율은 지방소득세 포함 기준</div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ANSWER BOX (AEO) -->
+<section class="answer" data-screen-label="02 Summary Answer">
+  <div class="wrap ans-grid">
+    <div class="ans-q">벤처투자 소득공제란?<span>요약 답변 · 최종 업데이트 2026-09-30</span></div>
+    <div class="ans-a">
+      <p>벤처투자 소득공제는 개인이 벤처기업 또는 개인투자조합에 투자한 금액의 일부를 종합소득금액에서 공제해 주는 제도입니다. 공제된 금액에는 <mark>본인의 한계세율(최대 49.5%)이 그대로 적용</mark>되므로, 세율 12~15%가 적용되는 일반 세액공제 항목보다 환급 효과가 큽니다.</p>
+      <p>한국벤처경영원은 유스업파트너스(주)가 운용하는 개인투자조합을 통해 미국채·안정금융자산, 청년 주거지원 부동산, 음악저작권 세 자산군 기업의 투자를 소개하고, 소득공제 절차를 안내합니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GUIDE -->
+<section id="guide" data-screen-label="03 Deduction Guide">
+  <div class="wrap">
+    <div class="label">소득공제 안내</div>
+    <h2 class="sec" style="margin-top:10px">투자 금액 구간별 공제율</h2>
+    <p class="lede" style="margin-top:14px">투자 금액이 커질수록 구간별 공제율이 달라집니다. 5,000만원을 투자하면 4,400만원, 즉 투자금의 88%가 소득공제 대상이 됩니다.</p>
+    <div class="rate-grid">
+      <div>
+        <table>
+          <thead><tr><th>투자 금액 구간</th><th>공제율</th><th style="text-align:right">구간 공제액(최대)</th></tr></thead>
+          <tbody class="num">
+            <tr><td>3,000만원 이하</td><td>100%</td><td class="r">3,000만원</td></tr>
+            <tr><td>3,000만원 초과 ~ 5,000만원 이하</td><td>70%</td><td class="r">1,400만원</td></tr>
+            <tr><td>5,000만원 초과</td><td>30%</td><td class="r">초과분 × 30%</td></tr>
+            <tr><td><b>5,000만원 투자 시 합계</b></td><td><b>88%</b></td><td class="r" style="color:#4d7c0f">4,400만원</td></tr>
+          </tbody>
+        </table>
+        <p class="note">공제 한도는 해당 과세연도 종합소득금액의 50%입니다. 투자일로부터 3년 이내에 출자지분을 양도하거나 회수하면 공제받은 세액이 추징될 수 있습니다. 개인별 적용 여부는 상담을 통해 확인하시기 바랍니다.</p>
+      </div>
+      <div class="card">
+        <h3>왜 환급 효과가 큰가요?</h3>
+        <p>세액공제는 정해진 비율(12~15%)만 돌려받지만, 소득공제는 과세 대상 소득 자체를 줄이므로 내 한계세율이 곧 환급률이 됩니다. 아래는 공제 대상 금액 100만원당 환급액 비교입니다.</p>
+        <div class="cmp num">
+          <div class="cmp-row"><span>세액공제(12%)</span><div class="bar"><i style="width:24%;background:#c9cdd8"></i></div><b>12만원</b></div>
+          <div class="cmp-row"><span>세액공제(15%)</span><div class="bar"><i style="width:30%;background:#c9cdd8"></i></div><b>15만원</b></div>
+          <div class="cmp-row"><span>소득공제 · 세율 26.4%</span><div class="bar"><i style="width:53%;background:#a78bfa"></i></div><b>26.4만원</b></div>
+          <div class="cmp-row"><span>소득공제 · 세율 38.5%</span><div class="bar"><i style="width:77%;background:var(--violet)"></i></div><b>38.5만원</b></div>
+          <div class="cmp-row"><span>소득공제 · 세율 49.5%</span><div class="bar"><i style="width:99%;background:var(--lime)"></i></div><b>49.5만원</b></div>
+        </div>
+        <p class="note">세율은 지방소득세(10%) 포함. 실제 환급액은 소득 구성과 다른 공제 항목에 따라 달라집니다.</p>
+      </div>
+    </div>
+
+    <ol class="flow">
+      <li><h4>상담·설명회</h4><p>한국벤처경영원이 소득 구간별 예상 공제 효과와 투자 구조를 설명합니다.</p></li>
+      <li><h4>개인투자조합 출자</h4><p>유스업파트너스(주)가 결성·운용하는 개인투자조합에 출자합니다.</p></li>
+      <li><h4>자산기업 투자</h4><p>조합이 미국채·부동산·음악저작권 자산기업에 투자합니다.</p></li>
+      <li><h4>소득공제 신청</h4><p>출자확인서를 받아 연말정산 또는 종합소득세 신고 시 공제를 신청합니다.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- SIMULATOR -->
+<section id="simulator" class="sim" data-screen-label="04 Simulator">
+  <div class="wrap">
+    <div class="label">세금 시뮬레이터</div>
+    <h2 class="sec" style="margin-top:10px">내 과세표준으로 예상 환급액 계산</h2>
+    <p class="lede" style="margin-top:14px">과세표준과 투자 금액을 입력하면 소득공제 금액과 예상 절세액을 계산합니다.</p>
+    <div class="sim-box">
+      <div class="sim-in">
+        <div class="field">
+          <label>공제 전 과세표준(연) <b class="num" id="vIncome"></b></label>
+          <input type="range" id="income" min="1000" max="50000" step="100" value="12000">
+          <div class="presets" data-for="income">
+            <button data-v="5000">5천만</button><button data-v="8800">8,800만</button><button data-v="12000">1.2억</button><button data-v="20000">2억</button><button data-v="35000">3.5억</button>
+          </div>
+        </div>
+        <div class="field">
+          <label>벤처투자 금액 <b class="num" id="vInvest"></b></label>
+          <input type="range" id="invest" min="100" max="20000" step="100" value="5000">
+          <div class="presets" data-for="invest">
+            <button data-v="1000">1천만</button><button data-v="3000">3천만</button><button data-v="5000">5천만</button><button data-v="10000">1억</button>
+          </div>
+        </div>
+        <p class="note">단위: 만원. 종합소득금액 대신 과세표준을 기준으로 단순화해 계산합니다.</p>
+      </div>
+      <div class="sim-out" aria-live="polite">
+        <div class="out-big">예상 절세액(지방소득세 포함)<b class="num" id="oRefund"></b></div>
+        <div class="out-list num">
+          <div><span>소득공제 금액</span><b id="oDed"></b></div>
+          <div><span>투자금 대비 공제율</span><b id="oRate"></b></div>
+          <div><span>적용 한계세율</span><b id="oMarg"></b></div>
+          <div><span>투자금 대비 절세 효과</span><b id="oEff"></b></div>
+        </div>
+        <p class="sim-txt" id="oTxt"></p>
+        <p class="note">본 계산은 2026년 종합소득세율 기준의 추정치이며, 투자 수익을 보장하지 않습니다. 실제 공제액은 다른 소득·공제 항목과 요건 충족 여부에 따라 달라집니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ASSETS / GROUP -->
+<section id="assets" class="group" data-screen-label="05 Asset Classes">
+  <div class="wrap">
+    <div class="label">투자 자산군 · 관계기업</div>
+    <h2 class="sec" style="margin-top:10px">하나의 입구, 세 가지 자산군</h2>
+    <p class="lede" style="margin-top:14px">한국벤처경영원은 소득공제 벤처투자의 통합 안내 창구입니다. 각 자산군의 상세 정보와 공시는 대표기업 사이트에서 확인할 수 있습니다.</p>
+
+    <div class="org">
+      <div class="org-top">
+        <div class="node"><div class="tier">운용사</div><h4>유스업파트너스(주)</h4><p>중소벤처기업부 등록 창업기획자. 개인투자조합 결성·운용 및 투자심사</p></div>
+        <div class="node kvm"><div class="tier">투자자 안내 창구</div><h4>한국벤처경영원</h4><p>벤처투자 소득공제 정보·컨설팅, 온라인 투자설명회, 리치레터</p></div>
+      </div>
+
+      <a class="co" href="#" onclick="return false">
+        <span class="kind">미국채 · 안정금융자산</span>
+        <h4>한국코넥스파트너스</h4>
+        <p>만기 보유 목적으로 미국 국채를 회차별 매입하고 투자자에게 매입 내역을 공시합니다. 2026년 7월부터 변동성이 높을 때는 CMA로 대기하는 "미국채 + CMA" 구조로 운용합니다.</p>
+        <div class="rel">관계기업: 코넥스파트너스, 한국스테이블파트너스, 한국벤처파트너스</div>
+        <div class="go">사이트 바로가기 → <span class="st">신규 개설</span></div>
+      </a>
+      <a class="co" href="#" onclick="return false">
+        <span class="kind">부동산 · 청년 주거지원</span>
+        <h4>한국청년주택</h4>
+        <p>청년 대상 주거지원 부동산자산을 보유하는 대표기업입니다. 보유 자산과 사업 현황을 공개합니다.</p>
+        <div class="rel">관계기업: 한국부동산자산(모회사), 한국생활주택(자회사)</div>
+        <div class="go">사이트 바로가기 → <span class="st">개선</span></div>
+      </a>
+      <a class="co" href="#" onclick="return false">
+        <span class="kind">음악저작권</span>
+        <h4>뮤직오너</h4>
+        <p>작곡가·작사가 등 음악저작권자에게 퍼블리싱 선급 등 금융을 지원하고, 음악저작권을 직접 매입하는 자산기업입니다. 한국음악저작권협회와 MOU 예정.</p>
+        <div class="rel">관계기업: 아트오너(모회사), 뮤직오너퍼블리싱·아트대부캐피탈(자회사)</div>
+        <div class="go">사이트 바로가기 → <span class="st">개선</span></div>
+      </a>
+      <a class="co" href="#" onclick="return false">
+        <span class="kind">음악저작권 담보대출</span>
+        <h4>아트대부캐피탈</h4>
+        <p>뮤직오너의 자회사로, 음악저작권 담보대출을 실행하는 등록 대부업체입니다. 대출 상품 정보는 아트대부캐피탈 공식 사이트에서만 안내합니다.</p>
+        <div class="rel">관계기업: 뮤직오너(모회사)</div>
+        <div class="go">사이트 바로가기 → <span class="st">신규 개설</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" data-screen-label="06 FAQ Database">
+  <div class="wrap">
+    <div class="faq-head">
+      <div>
+        <div class="label">분야별 FAQ</div>
+        <h2 class="sec" style="margin-top:10px">자주 묻는 질문</h2>
+        <p class="lede" style="margin-top:14px">투자설명회에서 실제로 받은 질문을 분야별로 정리했습니다. 모든 답변은 컴플라이언스 검토를 거쳐 게시됩니다.</p>
+      </div>
+      <div class="progress">
+        <small><b id="faqCount">0</b>개 게시 · 목표 100개</small>
+        <div class="pb"><i id="faqBar" style="width:0"></i></div>
+      </div>
+    </div>
+    <div class="faq-tools">
+      <div id="chips" style="display:flex;gap:8px;flex-wrap:wrap"></div>
+      <label class="search">⌕&nbsp;&nbsp;<input id="q" type="search" placeholder="예: 연말정산, 3년, 미국채"></label>
+    </div>
+    <div class="faq-list" id="faqList"></div>
+  </div>
+</section>
+
+<!-- MEDIA -->
+<section id="media" class="media" data-screen-label="07 Media & Newsletter">
+  <div class="wrap">
+    <div class="label">투자설명회 · 콘텐츠</div>
+    <h2 class="sec" style="margin-top:10px">설명회 영상과 리치레터</h2>
+    <p class="lede" style="margin-top:14px">유튜브 최신 영상은 채널과 자동 연동되어 게시됩니다. 영상마다 핵심 내용을 텍스트로 함께 제공합니다.</p>
+    <div class="media-grid">
+      <div>
+        <div class="vid-grid" id="vids"></div>
+        <p class="note">유튜브 API 연동 영역 · 최신 30개 자동 노출(여기서는 6개 표시)</p>
+      </div>
+      <div class="stack">
+        <div class="card">
+          <div class="row"><h3>온라인 투자설명회</h3><span class="tag">정기</span></div>
+          <p style="margin-top:6px">소득공제 구조와 자산군별 투자 내용을 설명하고 질의응답을 진행합니다. 일정은 <span class="ph-txt">[일정 연동]</span></p>
+          <div class="linkrow"><a href="#contact">설명회 신청</a><a href="#faq">설명회 FAQ</a></div>
+        </div>
+        <div class="card">
+          <div class="row"><h3>월간 리치레터</h3><span class="tag">매월</span></div>
+          <p style="margin-top:6px">소득공제·세금 일정, 자산군 소식을 매월 이메일로 보내드립니다.</p>
+          <form class="linkrow" onsubmit="event.preventDefault();this.querySelector('button').textContent='구독 완료';" style="gap:8px">
+            <input type="email" required placeholder="이메일 주소" style="flex:1;min-width:180px;font:inherit;font-size:14px;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--paper)">
+            <button class="btn dark" style="padding:9px 16px;font-size:14px;border:0;cursor:pointer">구독</button>
+          </form>
+        </div>
+        <div class="card">
+          <h3>공식 채널</h3>
+          <p style="margin-top:6px">홈페이지와 동일한 정보를 각 채널에 게시합니다.</p>
+          <div class="linkrow"><a href="#">유튜브</a><a href="#">인스타그램 카드뉴스</a><a href="#">카카오 채널</a><a href="#">티스토리</a><a href="#">보도자료</a><a href="#">소득공제 가이드북 (텍스트판)</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PEOPLE -->
+<section id="about" data-screen-label="08 Experts">
+  <div class="wrap">
+    <div class="label">대표 · 전문가 · 자문단</div>
+    <h2 class="sec" style="margin-top:10px">상담하는 사람들</h2>
+    <p class="lede" style="margin-top:14px">각 전문가의 이름을 검색하면 이 페이지로 연결되도록 개인별 프로필 페이지를 둡니다.</p>
+    <div class="people">
+      <div class="person"><div class="ph"></div><div class="role">대표</div><h4>[이름]</h4><p>[경력 · 데이터 기반 한 줄 소개]</p></div>
+      <div class="person"><div class="ph"></div><div class="role">자문 세무사</div><h4>[이름]</h4><p>[자격 · 전문 분야]</p></div>
+      <div class="person"><div class="ph"></div><div class="role">자문 회계사</div><h4>[이름]</h4><p>[자격 · 전문 분야]</p></div>
+      <div class="person"><div class="ph"></div><div class="role">투자상담</div><h4>[이름]</h4><p>[상담 분야 · 경력]</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact" style="padding-top:0" data-screen-label="09 Contact">
+  <div class="wrap">
+    <div class="label">상담 신청 · 오시는 길</div>
+    <h2 class="sec" style="margin-top:10px">1:1 소득공제 상담</h2>
+    <div class="ct-grid">
+      <form class="cf" id="cf">
+        <div class="f2">
+          <label>이름<input required placeholder="홍길동"></label>
+          <label>연락처<input required type="tel" placeholder="010-0000-0000"></label>
+        </div>
+        <div class="f2">
+          <label>소득 유형<select><option>근로소득자</option><option>사업소득자</option><option>기타</option></select></label>
+          <label>관심 분야<select><option>벤처투자 소득공제</option><option>미국채</option><option>부동산</option><option>음악저작권</option><option>국민성장펀드 비교</option></select></label>
+        </div>
+        <label>문의 내용<textarea rows="4" placeholder="예상 투자 금액, 궁금한 점을 적어주세요"></textarea></label>
+        <label class="agree"><input type="checkbox" required> 개인정보 수집·이용에 동의합니다. (상담 목적, 상담 완료 후 파기)</label>
+        <button class="btn dark">상담 신청하기</button>
+      </form>
+      <div class="info">
+        <dl>
+          <dt>회사명</dt><dd>한국벤처경영원</dd>
+          <dt>운용사</dt><dd>유스업파트너스(주)</dd>
+          <dt>주소</dt><dd><span class="ph-txt">[정보 통일 시트 주소]</span></dd>
+          <dt>대표전화</dt><dd><span class="ph-txt">[전화번호]</span></dd>
+          <dt>채팅 상담</dt><dd>카카오 채널 <span class="ph-txt">[채널명]</span></dd>
+          <dt>지도</dt><dd><a href="#" style="text-decoration:underline">네이버 지도</a> · <a href="#" style="text-decoration:underline">구글 지도</a> · <a href="#" style="text-decoration:underline">카카오맵</a></dd>
+        </dl>
+        <div class="map">지도 임베드 영역</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <a href="#top" class="logo" style="color:#fff"><i>KVM</i>한국벤처경영원</a>
+        <p style="margin-top:14px;max-width:320px">벤처투자 소득공제 정보·컨설팅, 온라인 투자설명회, 월간 리치레터를 제공합니다.</p>
+      </div>
+      <div><h5>안내</h5><ul><li><a href="#guide">소득공제 안내</a></li><li><a href="#simulator">세금 시뮬레이터</a></li><li><a href="#faq">분야별 FAQ</a></li><li><a href="#media">투자설명회</a></li></ul></div>
+      <div><h5>관계기업</h5><ul><li><a href="#assets">한국코넥스파트너스</a></li><li><a href="#assets">한국청년주택</a></li><li><a href="#assets">뮤직오너</a></li><li><a href="#assets">아트대부캐피탈</a></li><li><a href="#assets">유스업파트너스(주)</a></li></ul></div>
+      <div><h5>고객</h5><ul><li><a href="#contact">상담 신청</a></li><li><a href="#media">리치레터 구독</a></li><li><a href="#">개인정보처리방침</a></li><li><a href="#">사이트맵</a></li></ul></div>
+    </div>
+    <div class="legal">
+      한국벤처경영원 · 주소 [정보 통일 시트] · 사업자등록번호 [000-00-00000] · 대표 [이름]<br>
+      벤처투자는 원금 손실이 발생할 수 있으며, 투자 수익을 보장하지 않습니다. 소득공제 적용 여부와 금액은 개인의 소득 및 요건 충족 여부에 따라 달라집니다. 대출 관련 정보는 아트대부캐피탈 공식 사이트에서만 제공합니다.<br>
+      © 2026 한국벤처경영원
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ---------- FAQ data (draft; 검수 상태 표시) ---------- */
+const FAQ = [
+ {c:'소득공제',q:'벤처투자 소득공제는 얼마까지 받을 수 있나요?',a:'벤처투자 3,000만원까지 100% 소득공제, 5,000만원 투자 시 88%(4,400만원) 소득공제를 받을 수 있습니다. 5,000만원을 초과하는 금액은 30%가 공제됩니다. 전체 공제 한도는 해당 연도 종합소득금액의 50%입니다.',ok:1},
+ {c:'소득공제',q:'소득공제와 세액공제는 무엇이 다른가요?',a:'세액공제는 계산된 세금에서 정해진 비율(예: 12~15%)만큼을 빼 주는 방식입니다. 소득공제는 세금을 매기는 소득 자체를 줄여 주므로, 본인의 한계세율(최대 49.5%, 지방소득세 포함)만큼 세금이 줄어듭니다. 소득이 높을수록 소득공제의 환급 효과가 커집니다.',ok:1},
+ {c:'소득공제',q:'근로소득자도 연말정산에서 공제받을 수 있나요?',a:'네. 근로소득자는 출자확인서 등 증빙을 회사에 제출해 연말정산에서 공제를 신청할 수 있습니다. 사업소득자는 종합소득세 신고 시 신청합니다.',ok:1},
+ {c:'소득공제',q:'투자한 해에 반드시 공제를 받아야 하나요?',a:'투자한 과세연도부터 이후 2년 이내의 과세연도 중 공제받을 연도를 선택할 수 있습니다. 소득이 높은 해에 공제를 적용하면 환급 효과가 커집니다.',ok:1},
+ {c:'소득공제',q:'투자 후 3년 이내에 회수하면 어떻게 되나요?',a:'투자일로부터 3년 이내에 출자지분을 양도하거나 회수하는 등 요건을 충족하지 못하면 공제받은 세액이 추징될 수 있습니다. 투자 전 자금 계획을 함께 검토하시기 바랍니다.',ok:1},
+ {c:'소득공제',q:'개인투자조합을 통한 투자도 소득공제 대상인가요?',a:'네. 요건을 갖춘 개인투자조합에 출자한 금액도 벤처투자 소득공제 대상입니다. 한국벤처경영원이 소개하는 투자는 유스업파트너스(주)가 결성·운용하는 개인투자조합을 통해 이루어집니다.',ok:1},
+ {c:'소득공제',q:'공제 신청에 필요한 서류는 무엇인가요?',a:'조합 출자 후 발급되는 출자확인서(또는 투자확인서)가 기본 증빙입니다. 세부 서류와 발급 시기는 상담 시 안내해 드립니다.',ok:0},
+ {c:'국민성장펀드',q:'국민성장펀드와 벤처투자 소득공제는 어떻게 다른가요?',a:'[검수 대기] 두 제도의 공제 방식·한도·보유 요건을 표로 비교한 답변을 준비 중입니다. 확정 수치는 세무 자문 검토 후 게시합니다.',ok:0},
+ {c:'국민성장펀드',q:'두 제도를 함께 활용할 수 있나요?',a:'[검수 대기] 중복 적용 가능 여부와 한도 계산 방식은 세무 자문 검토 후 게시합니다.',ok:0},
+ {c:'미국채',q:'한국코넥스파트너스는 어떤 자산에 투자하나요?',a:'미국 국채 등 안정금융자산에 투자합니다. 자회사(코넥스파트너스, 한국스테이블파트너스, 한국벤처파트너스)를 통해 회차별로 미국채를 매입하고, 매입 내역을 투자자에게 공시합니다.',ok:1},
+ {c:'미국채',q:'미국채는 만기 전에 매도하나요?',a:'만기 보유를 원칙으로 운용합니다. 2026년 7월부터는 변동성이 높을 때 CMA로 대기하고 매입 시점이 확실할 때 매입하는 "미국채 + CMA" 구조를 적용하고 있습니다.',ok:1},
+ {c:'미국채',q:'회차별 매입 내역은 어디서 확인하나요?',a:'한국코넥스파트너스 사이트의 회차별 매입 공시 페이지에서 확인할 수 있습니다.',ok:1},
+ {c:'부동산',q:'한국청년주택은 어떤 사업을 하나요?',a:'청년 대상 주거지원 부동산자산을 보유하는 대표기업입니다. 모회사 한국부동산자산, 자회사 한국생활주택과 함께 사업을 운영합니다.',ok:1},
+ {c:'부동산',q:'보유 자산 현황은 공개되나요?',a:'[검수 대기] 부동산 담당 부서 자료 수령 후 보유 자산·사업 현황을 게시합니다.',ok:0},
+ {c:'저작권',q:'음악저작권에 투자한다는 것은 무슨 뜻인가요?',a:'뮤직오너는 음악저작권을 직접 매입하거나 저작권자에게 퍼블리싱 선급 등 금융을 지원하는 자산기업입니다. 투자자는 개인투자조합을 통해 이러한 저작권 자산기업에 투자합니다.',ok:1},
+ {c:'저작권',q:'작곡가·작사가도 뮤직오너를 이용할 수 있나요?',a:'네. 음악저작권자는 저작권료 선급(퍼블리싱 선급)이나 저작권 매입을 상담할 수 있습니다. 한국음악저작권협회와의 MOU는 예정되어 있습니다.',ok:1},
+ {c:'대부',q:'음악저작권 담보대출은 어디서 신청하나요?',a:'음악저작권 담보대출은 뮤직오너의 자회사이자 등록 대부업체인 아트대부캐피탈에서 실행합니다. 대출 조건과 신청 절차는 아트대부캐피탈 공식 사이트에서 확인하시기 바랍니다.',ok:1},
+];
+const CATS=['전체','소득공제','국민성장펀드','미국채','부동산','저작권','대부'];
+let cat='전체';
+const $=s=>document.querySelector(s);
+function renderChips(){
+  $('#chips').innerHTML=CATS.map(c=>{const n=c==='전체'?FAQ.length:FAQ.filter(f=>f.c===c).length;return `<button class="chip ${c===cat?'on':''}" data-c="${c}">${c}<em>${n}</em></button>`}).join('');
+}
+function renderFaq(){
+  const q=$('#q').value.trim();
+  const list=FAQ.filter(f=>(cat==='전체'||f.c===cat)&&(!q||(f.q+f.a).includes(q)));
+  $('#faqList').innerHTML=list.length?list.map((f,i)=>`<details ${i===0&&!q?'open':''}><summary><span class="cat">${f.c}</span><span class="q">${f.q}</span><span class="rv ${f.ok?'ok':''}">${f.ok?'검수 완료':'검수 대기'}</span><span class="pm">+</span></summary><div class="a">${f.a}<div class="meta">출처: 한국벤처경영원 투자설명회 FAQ · 최종 업데이트 2026-09-30</div></div></details>`).join(''):'<div class="empty">검색 결과가 없습니다. 상담 신청으로 질문을 남겨주세요.</div>';
+}
+$('#chips').addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;cat=b.dataset.c;renderChips();renderFaq();});
+$('#q').addEventListener('input',renderFaq);
+renderChips();renderFaq();
+$('#faqCount').textContent=FAQ.length;
+$('#faqBar').style.width=FAQ.length+'%';
+$('#faqCountHero').innerHTML=FAQ.length+'<small>개 / 100</small>';
+
+/* FAQPage + Organization schema (검수 완료 항목만) */
+const ld=document.createElement('script');ld.type='application/ld+json';
+ld.textContent=JSON.stringify([
+ {"@context":"https://schema.org","@type":"Organization","name":"한국벤처경영원","alternateName":"KVM","description":"벤처투자 소득공제 정보·컨설팅, 온라인 투자설명회, 월간 뉴스레터 리치레터","parentOrganization":{"@type":"Organization","name":"유스업파트너스(주)"}},
+ {"@context":"https://schema.org","@type":"FAQPage","mainEntity":FAQ.filter(f=>f.ok).map(f=>({"@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a}}))}
+]);
+document.head.appendChild(ld);
+
+/* ---------- Simulator ---------- */
+const BR=[[1400,.06],[5000,.15],[8800,.24],[15000,.35],[30000,.38],[50000,.40],[100000,.42],[Infinity,.45]];
+function tax(x){let t=0,p=0;for(const[l,r]of BR){if(x>p){t+=(Math.min(x,l)-p)*r;p=l}else break}return t}
+function marg(x){for(const[l,r]of BR)if(x<=l)return r;return .45}
+function dedOf(v){return Math.min(v,3000)+Math.max(0,Math.min(v,5000)-3000)*.7+Math.max(0,v-5000)*.3}
+const won=v=>{v=Math.round(v);if(v>=10000){const e=Math.floor(v/10000),m=v%10000;return e+'억'+(m?' '+m.toLocaleString()+'만':'')+'원'}return v.toLocaleString()+'만원'};
+function sim(){
+  const inc=+$('#income').value,inv=+$('#invest').value;
+  const raw=dedOf(inv),cap=inc*.5,ded=Math.min(raw,cap);
+  const refund=(tax(inc)-tax(Math.max(0,inc-ded)))*1.1;
+  $('#vIncome').textContent=won(inc);$('#vInvest').textContent=won(inv);
+  $('#oRefund').textContent=won(refund);
+  $('#oDed').textContent=won(ded)+(raw>cap?' (한도 적용)':'');
+  $('#oRate').textContent=(ded/inv*100).toFixed(1)+'%';
+  $('#oMarg').textContent=(marg(inc)*110).toFixed(1)+'%';
+  $('#oEff').textContent=(refund/inv*100).toFixed(1)+'%';
+  $('#oTxt').textContent=`과세표준 ${won(inc)}인 분이 ${won(inv)}을 벤처투자하면 ${won(ded)}이 소득공제되어, 약 ${won(refund)}의 세금이 줄어드는 것으로 추정됩니다.`;
+  document.querySelectorAll('.presets').forEach(p=>{const v=$('#'+p.dataset.for).value;p.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.v===v))});
+}
+['income','invest'].forEach(id=>{const el=$('#'+id);el.value=localStorage.getItem('kvm_'+id)||el.value;el.addEventListener('input',()=>{localStorage.setItem('kvm_'+id,el.value);sim()})});
+document.querySelectorAll('.presets').forEach(p=>p.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const el=$('#'+p.dataset.for);el.value=b.dataset.v;localStorage.setItem('kvm_'+p.dataset.for,el.value);sim()}));
+sim();
+
+/* ---------- Video placeholders ---------- */
+const V=[['투자설명회','5,000만원 투자 시 88% 공제, 계산 과정'],['쇼츠','소득공제 vs 세액공제 1분 정리'],['투자설명회','미국채 + CMA 운용 구조'],['쇼츠','3년 보유 요건, 꼭 알아야 할 것'],['인터뷰','음악저작권 자산이란'],['쇼츠','연말정산 전 체크리스트']];
+$('#vids').innerHTML=V.map(([t,s])=>`<div class="vid"><div class="th">YouTube</div><p>${s}</p><small>${t} · [게시일 자동]</small></div>`).join('');
+</script>
+</body>
+</html>

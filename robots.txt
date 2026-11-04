@@ -1,0 +1,66 @@
+# 한국벤처경영원 (KVM) — https://www.kofund.co.kr/
+# 일반 검색엔진 및 AI 검색·인용 봇 수집 허용 (공개 페이지 및 정적 리소스)
+
+User-agent: *
+Allow: /
+Disallow: /design_handoff_kvm_homepage/
+Disallow: /screenshots/
+Disallow: /*.srcmap.json$
+
+# 주요 검색엔진 크롤러
+User-agent: Googlebot
+Allow: /
+Disallow: /design_handoff_kvm_homepage/
+Disallow: /screenshots/
+Disallow: /*.srcmap.json$
+
+User-agent: Bingbot
+Allow: /
+Disallow: /design_handoff_kvm_homepage/
+Disallow: /screenshots/
+Disallow: /*.srcmap.json$
+
+User-agent: Yeti
+Allow: /
+Disallow: /design_handoff_kvm_homepage/
+Disallow: /screenshots/
+Disallow: /*.srcmap.json$
+
+# AI 검색 인덱싱 및 사용자 요청형 인용 봇 (검색 가시성·출처 인용 허용)
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /design_handoff_kvm_homepage/
+Disallow: /screenshots/
+Disallow: /*.srcmap.json$
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /design_handoff_kvm_homepage/
+Disallow: /screenshots/
+Disallow: /*.srcmap.json$
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /design_handoff_kvm_homepage/
+Disallow: /screenshots/
+Disallow: /*.srcmap.json$
+
+User-agent: Perplexity-User
+Allow: /
+
+# [참고] AI 모델 학습 전용 크롤러 정책 (검색 노출과 별개)
+# 운영자 방침에 따라 모델 학습 수집만 제한하려면 아래 주석을 해제하세요.
+# User-agent: GPTBot
+# Disallow: /
+# User-agent: ClaudeBot
+# Disallow: /
+# User-agent: Google-Extended
+# Disallow: /
+
+Sitemap: https://www.kofund.co.kr/sitemap.xml
