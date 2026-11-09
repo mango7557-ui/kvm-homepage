@@ -1,5 +1,6 @@
 (function(){
 const $=s=>document.querySelector(s);
+const $$=(s,root=document)=>Array.from(root.querySelectorAll(s));
 const FAQ=window.KVM_FAQ, RATES=window.KVM_RATES;
 const SIM_CFG=window.KVM_SIM_CONFIG||{defaultRateIndex:3,defaultInvest:3000};
 const won=v=>{v=Math.round(v);if(v>=10000){const e=Math.floor(v/10000),m=v%10000;return e+'억'+(m?' '+m.toLocaleString()+'만':'')+'원'}return v.toLocaleString()+'만원'};
@@ -10,7 +11,8 @@ if(hv){
   hv.muted=true;
   hv.defaultMuted=true;
   hv.playsInline=true;
-  const tryPlay=()=>{ hv.play && hv.play().catch(()=>{}); };
+  const tryPlay=()=>{ if(hv.dataset.paused!=='true'&&!matchMedia('(prefers-reduced-motion: reduce)').matches) hv.play && hv.play().catch(()=>{}); };
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){hv.autoplay=false;hv.pause();}
   if(hv.readyState>=2) tryPlay();
   else hv.addEventListener('loadeddata',tryPlay,{once:true});
   document.addEventListener('visibilitychange',()=>{ if(!document.hidden && hv.paused) tryPlay(); });
@@ -33,7 +35,13 @@ function initBannerCarousel(viewportId, count, intervalMs=3000, onSlideChange){
   const dotsWrap=ctrl?ctrl.querySelector('.cr-dots'):null;
   const prevBtn=ctrl?ctrl.querySelector('.cr-prev'):null;
   const nextBtn=ctrl?ctrl.querySelector('.cr-next'):null;
-  let idx=0, timer=null, startX=0, deltaX=0;
+  let idx=0, timer=null, startX=0, deltaX=0, paused=false;
+  if(ctrl){
+    const toggle=document.createElement('button');
+    toggle.type='button';toggle.className='carousel-toggle';toggle.textContent='일시정지';toggle.setAttribute('aria-pressed','false');
+    toggle.addEventListener('click',()=>{paused=!paused;toggle.textContent=paused?'자동 재생':'일시정지';toggle.setAttribute('aria-pressed',String(paused));paused?stop():start();});
+    ctrl.append(toggle);
+  }
 
   if(dotsWrap){
     dotsWrap.innerHTML=Array.from({length:count},(_,i)=>`<button type="button" class="cr-dot ${i===0?'on':''}" data-i="${i}" aria-label="${i+1}번 슬라이드"></button>`).join('');
@@ -47,15 +55,16 @@ function initBannerCarousel(viewportId, count, intervalMs=3000, onSlideChange){
     idx=((nextIdx%count)+count)%count;
     track.style.transform=`translateX(-${idx*100}%)`;
     if(dotsWrap){
-      dotsWrap.querySelectorAll('.cr-dot').forEach((d,i)=>d.classList.toggle('on',i===idx));
+      dotsWrap.querySelectorAll('.cr-dot').forEach((d,i)=>{d.classList.toggle('on',i===idx);d.setAttribute('aria-current',String(i===idx));});
     }
+    Array.from(track.children).forEach((slide,i)=>{slide.inert=i!==idx;slide.setAttribute('aria-hidden',String(i!==idx));});
     if(typeof onSlideChange==='function') onSlideChange(idx);
   }
   function next(){ go(idx+1); }
   function prev(){ go(idx-1); }
   function start(){
     stop();
-    if(!matchMedia('(prefers-reduced-motion: reduce)').matches && count>1){
+    if(!paused && !document.hidden && !matchMedia('(prefers-reduced-motion: reduce)').matches && count>1){
       timer=setInterval(next, intervalMs);
     }
   }
@@ -88,7 +97,8 @@ function initBannerCarousel(viewportId, count, intervalMs=3000, onSlideChange){
     start();
   });
 
-  start();
+  document.addEventListener('visibilitychange',()=>document.hidden?stop():start());
+  go(0);start();
   return { go, restart };
 }
 
@@ -342,7 +352,7 @@ const cxForm=$('.cx-form');
 if(cxForm){
   const ta=cxForm.querySelector('textarea');
   if(ta) ta.addEventListener('input',()=>{ delete ta.dataset.autofilled; });
-  cxForm.addEventListener('submit',()=>{
+  cxForm.addEventListener('kvm:submitted',()=>{
     const inc=(cxForm.querySelector('input[name="income"]:checked')||{}).value||'미선택';
     const intr=(cxForm.querySelector('input[name="interest"]:checked')||{}).value||'미선택';
     /* 개인정보(이름·연락처·문의원문)는 수집·전송하지 않고 소득유형·관심분야만 비식별 집계 */
@@ -352,7 +362,7 @@ if(cxForm){
 
 const subForm=$('.sub');
 if(subForm){
-  subForm.addEventListener('submit',()=>{
+  subForm.addEventListener('kvm:submitted',()=>{
     /* 이메일 원문은 제외하고 구독 전환 완료 이벤트만 비식별 집계 */
     trackConversion('subscribe_richletter',{section:'news'});
   });
@@ -363,7 +373,7 @@ const mobNav=$('#mobBottomNav');
 if(mobNav){
   const items=$$('.mb-item',mobNav);
   const setActive=(key)=>{
-    items.forEach(a=>a.classList.toggle('on',a.dataset.navSec===key));
+    items.forEach(a=>{const active=a.dataset.navSec===key;a.classList.toggle('on',active);if(active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
   };
   items.forEach(a=>{
     a.addEventListener('click',()=>{
@@ -379,7 +389,7 @@ if(mobNav){
     {id:'cases',key:'cases'}
   ];
   let ticking=false;
-  window.addEventListener('scroll',()=>{
+  const updateNav=()=>{
     if(ticking) return;
     ticking=true;
     requestAnimationFrame(()=>{
@@ -391,13 +401,16 @@ if(mobNav){
       }
       for(let i=0;i<secMap.length;i++){
         const el=document.getElementById(secMap[i].id);
-        if(el && y>=el.offsetTop){
+        if(el && y>=el.getBoundingClientRect().top+window.scrollY){
           setActive(secMap[i].key);
           return;
         }
       }
       setActive('top');
     });
-  },{passive:true});
+  };
+  window.addEventListener('scroll',updateNav,{passive:true});
+  window.addEventListener('resize',updateNav,{passive:true});
+  updateNav();
 }
 })();

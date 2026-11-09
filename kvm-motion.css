@@ -1,0 +1,136 @@
+/* KVM motion system — derived from anthropics/frontend-design, lottiefiles/motion-design, mblode/ui-animation
+   Personality: Corporate-Premium. Signature easing: enter cubic-bezier(.22,1,.36,1). Durations: 140 / 260 / 520ms.
+   One memorable moment: the refund calculator. Everything else is quiet feedback. */
+:root{
+  --m-enter:cubic-bezier(.22,1,.36,1);
+  --m-move:cubic-bezier(.25,1,.5,1);
+  --m-press:cubic-bezier(.25,.46,.45,.94);
+  --m-quick:140ms;--m-std:260ms;--m-slow:520ms;
+}
+
+/* 1. Tells removed: all-caps eyebrows → quiet sentence-case section markers */
+.label{text-transform:none!important;letter-spacing:-.01em!important;font-size:13px!important;font-weight:600!important;color:var(--ink-3)!important;gap:8px!important}
+.label:before{width:14px!important;height:14px!important;border-radius:50%!important;background:transparent!important;border:2px solid var(--sky)!important;box-sizing:border-box}
+.instr .card .en{text-transform:none!important;letter-spacing:0!important;font-size:12px!important}
+.eyebrow{text-transform:none!important;letter-spacing:0!important;font-size:12px!important;font-weight:600!important}
+.hero .label,.sim .label{color:var(--ink-3)!important}
+
+/* 2. Press feedback: instant on :active (0ms), settle on release. Transform only. */
+.btn,.hd-cta,.chip,.presets button,.cr-btn,.gs-card,.cx-submit,.mb-item,.qb-bar,.iss-cta,.ctx-links a,.primary,.secondary,.quiet,.side-tab,.cx-chip span,.kc-topic,.kc-send,.kc-fab{
+  transition:transform var(--m-std) var(--m-enter),background-color 200ms ease,color 200ms ease,border-color 200ms ease,box-shadow var(--m-std) var(--m-enter);
+}
+.btn:active,.hd-cta:active,.chip:active,.presets button:active,.cr-btn:active,.gs-card:active,.cx-submit:active,.mb-item:active,.qb-bar:active,.iss-cta:active,.ctx-links a:active,.primary:active,.secondary:active,.side-tab:active,.cx-chip:active span,.kc-topic:active,.kc-send:active,.kc-fab:active{
+  transform:scale(.97);transition-duration:0ms;
+}
+/* Hover only on devices that can hover */
+@media(hover:hover) and (pointer:fine){
+  .btn:hover,.hd-cta:hover,.cx-submit:hover,.primary:hover{transform:translateY(-1px)}
+  .co:hover,.pc:hover,.iv-p:hover,.iv-case:hover,.iv-card:hover,.qb:hover,.soc:hover{transform:translateY(-3px);transition:transform var(--m-std) var(--m-enter),box-shadow var(--m-std) var(--m-enter)}
+}
+@media(hover:none){
+  .co:hover,.pc:hover,.qb:hover,.soc:hover,.iv-p:hover,.iv-case:hover,.iv-card:hover{transform:none!important;box-shadow:none!important}
+}
+
+/* 3. Scroll reveal: three moments only, once, heading leads supporting text */
+.kv-rv{opacity:1;transform:none;transition:none}
+.m-reveal{opacity:0;transform:translateY(14px);transition:opacity var(--m-slow) var(--m-enter),transform var(--m-slow) var(--m-enter)}
+.m-reveal.in{opacity:1;transform:none}
+.m-reveal[data-m-order="1"]{transition-delay:90ms}
+.m-reveal[data-m-order="2"]{transition-delay:180ms}
+.m-reveal[data-m-order="3"]{transition-delay:240ms}
+html.no-js .m-reveal{opacity:1;transform:none}
+
+/* 4. The hero: one orchestrated entrance. Panel lands, then type, then metrics. */
+@keyframes m-hero-panel{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes m-hero-text{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.hero-grid>div:first-child{animation:m-hero-panel 720ms var(--m-enter) both}
+.hero-grid>div:first-child>*{animation:m-hero-text var(--m-slow) var(--m-enter) both}
+.hero-grid>div:first-child>:nth-child(1){animation-delay:220ms}
+.hero-grid>div:first-child>:nth-child(2){animation-delay:300ms}
+.hero-grid>div:first-child>:nth-child(3){animation-delay:380ms}
+.hero-grid>div:first-child>:nth-child(4){animation-delay:440ms}
+.hero-grid>div:first-child>:nth-child(5){animation-delay:500ms}
+.facts{animation:m-hero-panel 720ms var(--m-enter) 260ms both}
+.facts dd{font-variant-numeric:tabular-nums}
+.video-control{animation:m-hero-text var(--m-slow) var(--m-enter) 700ms both}
+
+/* 5. The memorable moment: calculator result */
+.out-big b{display:inline-block;font-variant-numeric:tabular-nums;transition:transform var(--m-std) var(--m-enter),color var(--m-std) ease}
+.out-big b.m-pop{animation:m-number-pop var(--m-slow) var(--m-enter)}
+@keyframes m-number-pop{0%{transform:translateY(8px) scale(.98);filter:blur(3px);opacity:.4}100%{transform:none;filter:blur(0);opacity:1}}
+.out-list b{transition:color var(--m-std) ease}
+.out-list b.m-flash{color:#bfe7ff}
+.sim-out{position:relative;overflow:hidden}
+.sim-out::after{content:"";position:absolute;inset:-40%;background:radial-gradient(circle at 70% 30%,#ffffff26,transparent 55%);animation:m-ambient 14s ease-in-out infinite alternate;pointer-events:none}
+@keyframes m-ambient{from{transform:translate(-4%,-3%) scale(1)}to{transform:translate(4%,3%) scale(1.06)}}
+.sim-out>*{position:relative;z-index:1}
+.sim-out.m-offscreen::after{animation-play-state:paused}
+.presets button.on{box-shadow:0 0 0 3px #007bb522}
+.sim input[type=range]{transition:accent-color 200ms}
+.sim-txt{transition:opacity var(--m-quick) ease}
+.sim-txt.m-swap{opacity:.35}
+
+/* 6. Bars grow once when first seen (purpose: explain magnitude) */
+.cmp .bar i,.vs-bars .bar i{transform-origin:left center;transform:scaleX(0);transition:transform 900ms var(--m-enter)}
+.cmp.in .bar i,.vs-bars.in .bar i{transform:scaleX(1)}
+.cmp.in .cmp-row:nth-child(2) .bar i,.vs-bars.in .vs-row:nth-child(2) .bar i{transition-delay:120ms}
+.cmp.in .cmp-row:nth-child(3) .bar i,.vs-bars.in .vs-row:nth-child(3) .bar i{transition-delay:240ms}
+html.no-js .cmp .bar i,html.no-js .vs-bars .bar i{transform:none}
+.bar{position:relative;overflow:hidden}
+
+/* 7. Carousel: directional slide, inactive slides settle; dots morph */
+.cr-track{transition:transform var(--m-slow) var(--m-move)}
+.cr-dot{transition:width var(--m-std) var(--m-enter),background-color 200ms ease}
+.cr-slide{transition:opacity var(--m-std) ease}
+.cr-slide[aria-hidden="true"]{opacity:.55}
+
+/* 8. FAQ accordion: open animates, close animates (paired). Plus rotates. */
+.faq-list details summary .pm{transition:transform var(--m-std) var(--m-enter),background-color 200ms ease,color 200ms ease}
+.faq-list details .ans{animation:m-ans-open var(--m-std) var(--m-enter)}
+@keyframes m-ans-open{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.faq-list details{transition:box-shadow var(--m-std) var(--m-enter),background-color 200ms ease}
+
+/* 9. Dropdown from trigger; emerges from top-left */
+.gnb .dd>div{opacity:0;transform:scale(.96) translateY(-4px);transform-origin:top left;transition:opacity 150ms ease,transform 150ms var(--m-enter);display:block!important;pointer-events:none}
+.gnb .dd:hover>div,.gnb .dd:focus-within>div{opacity:1;transform:none;transition-duration:250ms;pointer-events:auto}
+
+/* 10. Form status: emerges in place, error shakes firmly */
+.form-status{transition:opacity var(--m-std) ease,transform var(--m-std) var(--m-enter)}
+.form-status:not(:empty){animation:m-status-in var(--m-std) var(--m-enter)}
+@keyframes m-status-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.form-status.error{animation:m-shake 320ms cubic-bezier(.36,.07,.19,.97)}
+@keyframes m-shake{0%,100%{transform:translateX(0)}25%{transform:translateX(4px)}50%{transform:translateX(-2px)}75%{transform:translateX(2px)}}
+.form-status.success{animation:m-success var(--m-slow) var(--m-enter)}
+@keyframes m-success{0%{opacity:0;transform:translateY(10px) scale(.97)}60%{transform:translateY(-2px) scale(1.01)}100%{opacity:1;transform:none}}
+
+/* 11. Mobile nav indicator slides to active tab */
+.mob-bnav .mb-item.on::before{transition:transform var(--m-std) var(--m-enter)}
+.mob-bnav .mb-item svg{transition:transform var(--m-std) var(--m-enter)}
+.mob-bnav .mb-item.on svg{transform:translateY(-1px)}
+
+/* 12. Admin: panels crossfade, table rows settle */
+[data-panel]{animation:m-panel var(--m-std) var(--m-enter)}
+@keyframes m-panel{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.admin-detail[open]{animation:m-dialog 250ms var(--m-enter)}
+@keyframes m-dialog{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:none}}
+.admin-detail::backdrop{animation:m-fade 250ms ease}
+@keyframes m-fade{from{opacity:0}}
+.metric b{font-variant-numeric:tabular-nums}
+
+/* 13. Chatbot: launcher breathes gently (ambient ≤5%), panel emerges from launcher */
+.kc-fab{animation:m-breathe 3200ms ease-in-out infinite}
+@keyframes m-breathe{50%{transform:scale(1.03)}}
+.kc.on .kc-fab{animation:none}
+.kc-w{transform-origin:bottom right;transition:transform 320ms var(--m-enter),opacity 200ms ease}
+
+/* Reduced motion: replace travel with fades, keep state feedback */
+@media(prefers-reduced-motion:reduce){
+  .hero-grid>div:first-child,.hero-grid>div:first-child>*,.facts,.video-control{animation:none!important;opacity:1!important;transform:none!important}
+  .m-reveal{opacity:1;transform:none;transition:none}
+  .cmp .bar i,.vs-bars .bar i{transform:none!important;transition:none!important}
+  .out-big b.m-pop,.form-status,.form-status.error,.form-status.success,[data-panel],.admin-detail[open],.faq-list details .ans{animation:none!important}
+  .sim-out::after,.kc-fab{animation-play-state:paused!important}
+  .cr-track{transition-duration:0ms}
+  .btn,.hd-cta,.chip,.presets button,.co,.pc,.qb,.soc{transition:background-color 200ms ease,color 200ms ease,border-color 200ms ease}
+  .btn:hover,.co:hover,.pc:hover,.qb:hover,.soc:hover{transform:none!important}
+}

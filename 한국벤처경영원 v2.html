@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko" class="no-js">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>한국벤처경영원(KVM) | 벤처투자 소득공제·개인투자조합·개인공동투자 컨설팅</title>
 <meta name="description" content="조세특례제한법 제16조에 따른 벤처투자 소득공제(3,000만원까지 100%, 5,000만원 투자 시 88%·4,400만원, 종합소득금액 50% 한도) 제도와 한계세율별 예상 환급액 계산기, 미국채·부동산·음악저작권 벤처인증기업 정보를 안내합니다.">
 <link rel="canonical" href="https://www.kofund.co.kr/">
@@ -15,6 +15,9 @@
 <link rel="stylesheet" href="kvm-contact.css?v=2">
 <link rel="stylesheet" href="kvm-investor.css?v=3">
 <link rel="stylesheet" href="kvm-unify.css?v=9">
+<link rel="stylesheet" href="kvm-design.css?v=10">
+<link rel="stylesheet" href="kvm-motion.css?v=11">
+<script>document.documentElement.classList.remove('no-js')</script>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.kofund.co.kr/">
 <meta property="og:site_name" content="한국벤처경영원">
@@ -34,6 +37,7 @@
 </script>
 </head>
 <body>
+<a class="skip-link" href="#top">본문 바로가기</a>
 
 <header>
   <div class="kbar"><i></i><i></i><i></i><i></i></div>
@@ -49,7 +53,7 @@
       <a href="#faq">FAQ</a>
       <span class="dd"><a href="#news">경영원 소식</a><div><span><a href="#news">8-1 뉴스기사</a><a href="#social">8-2 소셜미디어</a></span></div></span>
     </nav>
-    <div class="hd-util"><a href="#about">회사소개·자문단</a><a href="#contact">오시는 길</a></div>
+    <div class="hd-util"><a href="#about">회사소개·자문단</a><a href="#contact">오시는 길</a><a href="signup.html">회원가입</a></div>
     <a href="#contact" class="hd-cta">상담 신청</a>
   </div>
 </header>
@@ -64,6 +68,7 @@
     </video>
     <div class="hero-veil"></div>
   </div>
+  <button class="video-control" type="button" aria-controls="heroVideo" aria-pressed="false">영상 일시정지 Ⅱ</button>
   <div class="wrap hero-grid">
     <div>
       <div class="hero-tag"><b>소득공제 100%</b><span>소득공제 벤처투자의 리더 · 창립 12주년</span></div>
@@ -730,7 +735,7 @@
         <button class="chip" data-c="저작권">저작권<em>2</em></button>
         <button class="chip" data-c="대부">대부<em>1</em></button>
       </div>
-      <label class="search">⌕&nbsp;&nbsp;<input id="q" type="search" placeholder="예: 연말정산, 종합한도, 미국채"></label>
+      <label class="search">⌕&nbsp;&nbsp;<input id="q" type="search" aria-label="FAQ 검색" placeholder="예: 연말정산, 종합한도, 미국채"></label>
     </div>
     <div class="faq-list" id="faqList">
       <details open><summary><span class="cat">소득공제</span><span class="q">벤처투자 소득공제는 얼마까지 받을 수 있나요?</span><span class="rv ok">검수 완료</span><span class="pm">+</span></summary><div class="ans">벤처투자 3,000만원까지 100% 소득공제, 5,000만원 투자 시 88%(4,400만원) 소득공제를 받을 수 있습니다. 벤처투자 소득공제에는 종합소득금액의 50% 한도가 적용됩니다.<div class="meta">출처: 한국벤처경영원 투자설명회 FAQ · 최종 업데이트 2026-11-02</div></div></details>
@@ -768,7 +773,7 @@
         <div class="row"><h4>월간 리치레터</h4><span class="tag">310호 이상</span></div>
         <p>매월 다섯 가지 고정 테마로 발행합니다. 3년치 월별 아카이브를 웹에서 볼 수 있습니다.</p>
         <ol class="themes"><li>이슈</li><li>소득공제</li><li>기업 IR</li><li>투자사례</li><li>투자설명회 예고</li></ol>
-        <form class="sub" onsubmit="event.preventDefault();this.querySelector('button').textContent='구독 완료';">
+        <form class="sub">
           <input type="email" required placeholder="이메일 주소" aria-label="이메일">
           <button class="btn dark">구독</button>
         </form>
@@ -886,12 +891,12 @@
       <p class="cx-lede">소득 유형과 관심 분야만 알려주시면, 담당자가 직접 연락드려 올해 종합소득금액 50% 한도 내 공제 가능 금액과 구비 서류를 함께 확인해 드립니다.</p>
     </div>
     <div class="cx-grid">
-      <form class="cx-form" onsubmit="event.preventDefault();this.classList.add('sent');this.querySelector('.cx-submit b').textContent='신청이 접수되었습니다';">
+      <form class="cx-form">
         <fieldset>
           <legend><i>01</i>기본 정보</legend>
           <div class="cx-f2">
-            <label class="cx-fld"><span>이름</span><input required placeholder="홍길동" autocomplete="name"></label>
-            <label class="cx-fld"><span>연락처</span><input required type="tel" placeholder="010-0000-0000" autocomplete="tel"></label>
+            <label class="cx-fld"><span>이름</span><input name="name" required maxlength="80" placeholder="홍길동" autocomplete="name"></label>
+            <label class="cx-fld"><span>연락처</span><input name="phone" required type="tel" maxlength="24" placeholder="010-0000-0000" autocomplete="tel"></label>
           </div>
         </fieldset>
         <fieldset>
@@ -904,10 +909,10 @@
         </fieldset>
         <fieldset>
           <legend><i>04</i>문의 내용 <em>선택</em></legend>
-          <label class="cx-fld"><textarea rows="3" placeholder="예: 성과급 수령 예정, 올해 공제 가능 금액이 궁금합니다"></textarea></label>
+          <label class="cx-fld"><textarea name="message" aria-label="문의 내용" maxlength="3000" rows="3" placeholder="예: 성과급 수령 예정, 올해 공제 가능 금액이 궁금합니다"></textarea></label>
         </fieldset>
         <div class="cx-foot">
-          <label class="cx-agree"><input type="checkbox" required><span class="box"></span><span>개인정보 수집·이용에 동의합니다. <small>(상담 목적, 상담 완료 후 파기)</small></span></label>
+          <label class="cx-agree"><input type="checkbox" name="consent" required><span class="box"></span><span>개인정보 수집·이용에 동의합니다. <small>(상담 목적, 상담 완료 후 파기)</small></span></label>
           <button class="cx-submit" type="submit"><b>상담 신청하기</b><span class="ar">→</span></button>
         </div>
       </form>
@@ -955,6 +960,7 @@
       <div><h5>투자방식 · 투자기업</h5><ul><li><a href="#direct-invest">개인공동투자(직접투자) 안내</a></li><li><a href="#companies">세 자산군 · 포트폴리오</a></li><li><a href="#select">기업선정 및 투자심사 기준</a></li><li><a href="#partners">파트너사</a></li><li><a href="https://www.youthup.co.kr/" target="_blank" rel="noopener">유스업파트너스(주) (GP) ↗</a></li><li><a href="https://www.youthhousing.co.kr/" target="_blank" rel="noopener">한국청년주택 ↗</a></li><li><a href="https://musicowner.kr/" target="_blank" rel="noopener">뮤직오너 ↗</a></li></ul></div>
       <div><h5>FAQ · 소식 · 상담</h5><ul><li><a href="#faq">분야별 FAQ</a></li><li><a href="#news">보도자료 · 월간 리치레터</a></li><li><a href="#social">공식 소셜미디어 · 유튜브</a></li><li><a href="#about">한국벤처경영원 소개 · 자문단</a></li><li><a href="#contact">1:1 소득공제 상담 · 오시는 길</a></li><li><a href="https://blog.naver.com/ko-funding" target="_blank" rel="noopener">네이버 공식 블로그 ↗</a></li><li><a href="https://www.instagram.com/kvm0615/" target="_blank" rel="noopener">인스타그램 @kvm0615 ↗</a></li></ul></div>
     </div>
+    <nav class="site-links" aria-label="회원 서비스"><a href="signup.html">회원가입</a><a href="login.html">로그인 · 마이페이지</a><a href="admin.html">관리자</a></nav>
     <div class="legal">
       한국벤처경영원 · 대표 김승찬 · 사업자등록번호 256-86-00077 · (06182) 서울특별시 강남구 영동대로 407, 코니빌딩 7층 · Tel 02-538-9999 · Fax 02-538-9955 · <a href="mailto:kofund@kofund.co.kr">kofund@kofund.co.kr</a><br>
       개인투자조합 업무집행조합원: 유스업파트너스(주) (중소벤처기업부 등록 창업기획자) · Tel 02-6952-8088<br>
@@ -992,23 +998,11 @@
   </a>
 </nav>
 <script src="kvm-data-v2.js"></script>
-<script src="kvm-app-v2.js"></script>
+<script src="kvm-app-v2.js?v=10"></script>
+<script src="kvm-config.js?v=10"></script>
+<script type="module" src="kvm-site.js?v=10"></script>
 <script src="kvm-yt.js?v=4"></script>
 <script src="kvm-rag.js?v=4"></script>
-<script>
-(function(){
-  if(!('IntersectionObserver' in window)) return;
-  var sel='h2.sec,.lede,.card,.v-node,.co,.pc,.qb,.soc,.ptn,.iv-card,.iv-case,.iv-p,.iv-lead,.cx-form,.cx-card,.cx-map,.sim-box,.vs-bars,.ans-grid,.faq-list,.press,.anniv,.node.gp,main table,.cr-viewport';
-  var els=[].slice.call(document.querySelectorAll(sel)).filter(function(e){return !e.closest('.hero')&&e.getBoundingClientRect().top>innerHeight});
-  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){var e=en.target;var sib=e.parentElement?[].indexOf.call(e.parentElement.children,e):0;e.style.transitionDelay=Math.min(sib,5)*60+'ms';e.classList.add('in');io.unobserve(e);}})},{rootMargin:'0px 0px -8% 0px'});
-  els.forEach(function(e){e.classList.add('kv-rv');io.observe(e);});
-  var revealTarget=function(){
-    if(!location.hash||location.hash==='#top') return;
-    try{var t=document.querySelector(location.hash);if(t){var sec=t.closest('section')||t;[].slice.call(sec.querySelectorAll('.kv-rv')).forEach(function(e){e.style.transitionDelay='0ms';e.classList.add('in');io.unobserve(e);});}}catch(err){}
-  };
-  window.addEventListener('hashchange',revealTarget);
-  revealTarget();
-})();
-</script>
+<script src="kvm-motion.js?v=11"></script>
 </body>
 </html>
