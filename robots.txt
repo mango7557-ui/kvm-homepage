@@ -6,6 +6,13 @@ Allow: /
 Disallow: /design_handoff_kvm_homepage/
 Disallow: /screenshots/
 Disallow: /*.srcmap.json$
+Disallow: /admin.html
+Disallow: /account.html
+Disallow: /login.html
+Disallow: /signup.html
+Disallow: /supabase-schema.sql
+Disallow: /SUPABASE_SETUP.md
+Disallow: /DESIGN_REVIEW.md
 
 # 주요 검색엔진 크롤러
 User-agent: Googlebot

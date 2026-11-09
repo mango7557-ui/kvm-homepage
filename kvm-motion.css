@@ -80,7 +80,6 @@ html.no-js .cmp .bar i,html.no-js .vs-bars .bar i{transform:none}
 
 /* 7. Carousel: directional slide, inactive slides settle; dots morph */
 .cr-track{transition:transform var(--m-slow) var(--m-move)}
-.cr-dot{transition:width var(--m-std) var(--m-enter),background-color 200ms ease}
 .cr-slide{transition:opacity var(--m-std) ease}
 .cr-slide[aria-hidden="true"]{opacity:.55}
 

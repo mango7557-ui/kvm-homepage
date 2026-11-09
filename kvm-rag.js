@@ -84,7 +84,7 @@
   root.className = 'kc';
   root.innerHTML = '' +
     '<button class="kc-fab" aria-label="AI 소득공제 안내 열기">' + IC.spark + IC.xl + '</button>' +
-    '<div class="kc-nudge" role="button" tabindex="0"><b>AI 소득공제 안내</b>내 소득이면 얼마나 환급받을 수 있을까요? 지금 물어보세요.<button aria-label="닫기">' + IC.xs + '</button></div>' +
+    '<div class="kc-nudge"><button type="button" class="kc-nudge-open"><b>AI 소득공제 안내</b>내 소득이면 얼마나 환급받을 수 있을까요? 지금 물어보세요.</button><button type="button" class="kc-nudge-x" aria-label="안내 닫기">' + IC.xs + '</button></div>' +
     '<div class="kc-w closed" role="dialog" aria-label="AI 소득공제 안내">' +
       '<div class="kc-hd">' +
         '<div class="kc-orb">' + IC.sparkS + '</div>' +
@@ -139,7 +139,7 @@
   $('.kc-close').onclick = () => open(false);
   $('.kc-grow').onclick = () => panel.classList.toggle('wide');
   $('.kc-reset').onclick = () => { if (!busy) { history = []; welcome(); input.focus(); } };
-  nudge.onclick = e => { if (e.target.closest('button')) { nudge.classList.add('gone'); e.stopPropagation(); return; } open(true); };
+  nudge.onclick = e => { if (e.target.closest('.kc-nudge-x')) { nudge.classList.add('gone'); e.stopPropagation(); return; } if (e.target.closest('.kc-nudge-open')) open(true); };
   log.addEventListener('scroll', () => panel.classList.toggle('scrolled', log.scrollTop > 4));
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && isOpen()) open(false); });
   log.addEventListener('click', e => {
