@@ -24,7 +24,7 @@ if(window.KVM_METRICS && $('#heroMetrics')){
   const M=window.KVM_METRICS;
   const rows=(M.items||[]).map(it=>`<div><dt>${it.label}</dt><dd class="num">${it.value}<small>${it.unit}${it.sub&&it.key==='history'?' · '+it.sub:''}</small></dd></div>`).join('');
   $('#heroMetrics').innerHTML=rows;
-  const note=$('#heroMetricsNote');if(note)note.innerHTML=`집계 기준일 <b class="num">${M.baseDate}</b> <span class="ph-txt">[전산 DB 자동 집계 연동 · 가안]</span> · 환급세액은 지방소득세 포함 한계세율 기준 추정치`;
+  const note=$('#heroMetricsNote');if(note)note.innerHTML=`집계 기준일 <b class="num">${M.baseDate}</b> <span class="ph-txt">[전산 DB 자동 집계 연동, 가안]</span>. 환급세액은 지방소득세 포함 한계세율 기준 추정치`;
 }
 
 /* ②·③ 공통 3초 자동 전환 배너 캐러셀 엔진 (호버 일시정지, 좌우 화살표, 인디케이터 점, 모바일 스와이프) */
@@ -161,7 +161,7 @@ if($('#groupTrack') && groupList.length){
           <div class="gs-item hl"><span>누적 환급세액</span><b>${g.refundAmount}</b><small class="ph-txt">[전산 집계 연동]</small></div>
         </div>
         <p class="g-desc">${g.desc}</p>
-        <div class="g-foot"><span>집계 기준일: ${window.KVM_METRICS?window.KVM_METRICS.baseDate:'2026.10.31'} · 전산 자동 집계</span><a href="#contact">임직원·그룹 절세 상담 신청 →</a></div>
+        <div class="g-foot"><span>집계 기준일: ${window.KVM_METRICS?window.KVM_METRICS.baseDate:'2026.10.31'} · 전산 자동 집계</span><a href="#contact">임직원·그룹 절세 상담 신청</a></div>
       </div>
     </article>
   `).join('');

@@ -3,3 +3,5 @@ screenshots/
 design_handoff_kvm_homepage/
 *.srcmap.json
 .thumbnail.jpg
+.taste-skill/
+.hallmark/

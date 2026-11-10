@@ -96,7 +96,7 @@
       '<div class="kc-body" aria-live="polite"></div>' +
       '<div class="kc-ft">' +
         '<form class="kc-comp">' +
-          '<textarea rows="1" maxlength="300" placeholder="소득공제에 대해 무엇이든 물어보세요" aria-label="질문"></textarea>' +
+          '<label class="kc-sr" for="kcInput">질문 입력</label><textarea id="kcInput" rows="1" maxlength="300" placeholder="소득공제에 대해 무엇이든 물어보세요"></textarea>' +
           '<button class="kc-send" type="submit" disabled aria-label="보내기">' + IC.up + '</button>' +
         '</form>' +
         '<p class="kc-note">AI 답변은 참고용이며 세무 자문이 아닙니다. 실제 공제액은 개인 소득·투자 조건에 따라 달라집니다.</p>' +

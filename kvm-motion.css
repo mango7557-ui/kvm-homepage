@@ -2,6 +2,7 @@
    Personality: Corporate-Premium. Signature easing: enter cubic-bezier(.22,1,.36,1). Durations: 140 / 260 / 520ms.
    One memorable moment: the refund calculator. Everything else is quiet feedback. */
 :root{
+  --m-flash:#bfe7ff;--m-glow:#fdfeff26;--m-ring:rgba(0,0,0,.12);
   --m-enter:cubic-bezier(.22,1,.36,1);
   --m-move:cubic-bezier(.25,1,.5,1);
   --m-press:cubic-bezier(.25,.46,.45,.94);
@@ -9,7 +10,7 @@
 }
 
 /* 1. Tells removed: all-caps eyebrows → quiet sentence-case section markers */
-.label{text-transform:none!important;letter-spacing:-.01em!important;font-size:13px!important;font-weight:600!important;color:var(--ink-3)!important;gap:8px!important}
+.label{text-transform:none!important;font-size:13px!important;font-weight:600!important;color:var(--ink-3)!important;gap:8px!important}
 .label:before{width:14px!important;height:14px!important;border-radius:50%!important;background:transparent!important;border:2px solid var(--sky)!important;box-sizing:border-box}
 .instr .card .en{text-transform:none!important;letter-spacing:0!important;font-size:12px!important}
 .eyebrow{text-transform:none!important;letter-spacing:0!important;font-size:12px!important;font-weight:600!important}
@@ -33,7 +34,7 @@
 
 /* 3. Scroll reveal: three moments only, once, heading leads supporting text */
 .kv-rv{opacity:1;transform:none;transition:none}
-.m-reveal{opacity:0;transform:translateY(14px);transition:opacity var(--m-slow) var(--m-enter),transform var(--m-slow) var(--m-enter)}
+.m-reveal{transition:opacity var(--m-slow) var(--m-enter),transform var(--m-slow) var(--m-enter)}
 .m-reveal.in{opacity:1;transform:none}
 .m-reveal[data-m-order="1"]{transition-delay:90ms}
 .m-reveal[data-m-order="2"]{transition-delay:180ms}
@@ -59,13 +60,13 @@ html.no-js .m-reveal{opacity:1;transform:none}
 .out-big b.m-pop{animation:m-number-pop var(--m-slow) var(--m-enter)}
 @keyframes m-number-pop{0%{transform:translateY(8px) scale(.98);filter:blur(3px);opacity:.4}100%{transform:none;filter:blur(0);opacity:1}}
 .out-list b{transition:color var(--m-std) ease}
-.out-list b.m-flash{color:#bfe7ff}
+.out-list b.m-flash{color:var(--m-flash)}
 .sim-out{position:relative;overflow:hidden}
-.sim-out::after{content:"";position:absolute;inset:-40%;background:radial-gradient(circle at 70% 30%,#ffffff26,transparent 55%);animation:m-ambient 14s ease-in-out infinite alternate;pointer-events:none}
+.sim-out::after{content:"";position:absolute;inset:-40%;background:radial-gradient(circle at 70% 30%,var(--m-glow),transparent 55%);animation:m-ambient 14s ease-in-out infinite alternate;pointer-events:none}
 @keyframes m-ambient{from{transform:translate(-4%,-3%) scale(1)}to{transform:translate(4%,3%) scale(1.06)}}
 .sim-out>*{position:relative;z-index:1}
 .sim-out.m-offscreen::after{animation-play-state:paused}
-.presets button.on{box-shadow:0 0 0 3px #007bb522}
+.presets button.on{box-shadow:0 0 0 3px var(--m-ring)}
 .sim input[type=range]{transition:accent-color 200ms}
 .sim-txt{transition:opacity var(--m-quick) ease}
 .sim-txt.m-swap{opacity:.35}
@@ -90,7 +91,7 @@ html.no-js .cmp .bar i,html.no-js .vs-bars .bar i{transform:none}
 .faq-list details{transition:box-shadow var(--m-std) var(--m-enter),background-color 200ms ease}
 
 /* 9. Dropdown from trigger; emerges from top-left */
-.gnb .dd>div{opacity:0;transform:scale(.96) translateY(-4px);transform-origin:top left;transition:opacity 150ms ease,transform 150ms var(--m-enter);display:block!important;pointer-events:none}
+.gnb .dd>div{transform:scale(.96) translateY(-4px);transform-origin:top left;transition:opacity 150ms ease,transform 150ms var(--m-enter);display:block!important;pointer-events:none}
 .gnb .dd:hover>div,.gnb .dd:focus-within>div{opacity:1;transform:none;transition-duration:250ms;pointer-events:auto}
 
 /* 10. Form status: emerges in place, error shakes firmly */
