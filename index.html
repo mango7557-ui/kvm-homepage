@@ -23,6 +23,8 @@
 <link rel="stylesheet" href="kvm-cases-refresh.css?v=1">
 <link rel="stylesheet" href="kvm-system-refresh.css?v=1">
 <link rel="stylesheet" href="kvm-sections-refresh.css?v=1">
+<link rel="stylesheet" href="kvm-storyboard.css?v=1">
+<link rel="stylesheet" href="kvm-story-cases.css?v=1">
 <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js')</script>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.kofund.co.kr/">
@@ -50,16 +52,9 @@
   <div class="wrap hd">
     <a href="#top" class="logo"><img src="assets/img/kvm-logo-2.png" alt="한국벤처경영원 홈으로 이동" width="969" height="126" fetchpriority="high" decoding="async"></a>
     <nav class="gnb" aria-label="주요 섹션 메뉴">
-      <a href="#top">홈</a>
-      <span class="dd"><a href="#cases">성공사례</a><div><span><a href="#cases-personal">2-1 개인별 사례</a><a href="#cases-group">2-2 그룹별 사례</a></span></div></span>
-      <span class="dd"><a href="#issues">절세이슈</a><div><span><a href="#issues">절세 뉴스 롤링</a><a href="#ivCalWrap">연간 절세 캘린더</a></span></div></span>
-      <span class="dd"><a href="#system-intro">제도소개</a><div><span><a href="#system-intro">4-1 제도 소개</a><a href="#simulator">4-2 소득공제 계산기</a><a href="#law">근거 법률·공제시기</a><a href="#system">국민성장펀드 비교</a></span></div></span>
-      <span class="dd"><a href="#companies">투자기업</a><div><span><a href="#companies">투자기업 포트폴리오</a><a href="#select">기업선정 및 투자심사</a><a href="#partners">파트너사</a></span></div></span>
-      <a href="#direct-invest">개인공동투자</a>
-      <a href="#faq">FAQ</a>
-      <span class="dd"><a href="#news">경영원 소식</a><div><span><a href="#news">8-1 뉴스기사</a><a href="#social">8-2 소셜미디어</a></span></div></span>
+      <a href="#system-intro">소득공제<br>벤처투자</a><a href="#cases">소득공제<br>절세사례</a><a href="#system">국민성장펀드<br>비교분석</a><a href="#issues">성과급<br>세금절세</a><a href="#companies">안정자산 보유 벤처인증기업<br>부동산·미국채·음악저작권</a><a href="#direct-invest">투자방법</a><a href="#faq">FAQ</a><a href="#news">언론보도</a>
     </nav>
-    <div class="hd-util"><a href="#about">회사소개·자문단</a><a href="#contact">오시는 길</a><a href="signup.html">회원가입</a></div>
+    <div class="hd-util"><a href="login.html">로그인</a><a href="signup.html">회원가입</a></div>
     <a href="#contact" class="hd-cta">상담 신청</a>
   </div>
 </header>
@@ -99,26 +94,172 @@
     </div>
   </div>
 </section>
+<section id="system-intro" class="venture" data-screen-label="04-1 제도소개 (벤처투자·소득공제 통합)">
+  <div class="wrap">
+    <h2 class="story-heading">소득공제 벤처투자란?</h2>
+    <div class="story-law"><div class="story-law-label"><b>법제처</b><span>벤처투자조합 출자 등에 대한 소득공제</span></div><p>개인이 개인공동투자 또는 개인투자조합을 통해 공제 대상 기업에 투자하는 경우, 법령에서 정한 요건에 따라 소득을 공제받을 수 있는 제도입니다.</p><a href="https://www.law.go.kr/법령/조세특례제한법/제16조" target="_blank" rel="noopener">조세특례제한법 제16조 확인하기 ↗</a></div>
+    <div class="story-deduction"><div>벤처투자<br>투자금액별<br>소득공제율</div><div><p><strong>3,000만원</strong>까지 <em>100%</em></p><p><b>3,000만원 초과 ~ 5,000만원 이하분</b> 70% <small>(5,000만원 투자 시 총 88%)</small></p><p>5,000만원 초과분 30%</p></div></div>
+    <p class="story-caption">소득공제 한도 · 해당 과세연도 종합소득금액의 50%<br>공제 대상과 세부 요건은 투자 전 확인이 필요합니다.</p>
+    <details class="story-details"><summary>벤처투자 제도 자세히 보기</summary>
+    <h3 class="sr-sub">벤처투자 소득공제 3단계 구조</h3>
+    <div class="v-flow">
+      <div class="v-node"><span class="k">투자자</span><h4>개인 출자</h4><p>근로소득자·사업소득자·전문직 등 국내 거주자 개인</p></div>
+      <div class="v-arrow" aria-hidden="true"></div>
+      <div class="v-node"><span class="k">투자 방식</span><h4>직접 또는 간접</h4>
+        <div class="v-two"><div><b>개인투자조합</b>간접투자 · GP 유스업파트너스(주)</div><div><b>개인공동투자</b>직접투자 · <a href="#direct-invest" style="color:var(--violet);text-decoration:underline">개인공동투자 절차 안내 ↓</a></div></div></div>
+      <div class="v-arrow" aria-hidden="true"></div>
+      <div class="v-node end"><span class="k">투자 대상</span><h4>벤처인증기업</h4><p>상환전환우선주(RCPS), 전환사채(CB), 신주 등으로 투자하고, 투자자는 구간별 최대 100%를 소득공제 받습니다.</p></div>
+    </div>
 
-<!-- ①-b 홈 하단 퀵링크 (유지) -->
-<section class="quick" data-screen-label="01b 홈 하단 퀵링크">
-  <div class="wrap quick-grid">
-    <div class="qb">
-      <img class="qb-img" src="assets/img/quick-house.jpg" alt="청년 주거지원 부동산벤처기업 한국청년주택 실내 공간" width="1024" height="1024" loading="lazy" decoding="async">
-      <a class="qb-bar" href="https://www.youthhousing.co.kr/" target="_blank" rel="noopener"><span class="ico" style="background:var(--brand-blue);">주택</span><span><small>청년주거지원을 위한 사회적 성격 부동산벤처기업</small><b>한국청년주택 바로가기</b></span><span class="ar">↗</span></a>
+    <div class="instr">
+      <div class="card"><span class="en">Redeemable Convertible Preference Shares</span><h3>상환전환우선주 (RCPS)</h3>
+        <p class="def">만기 때 투자금 상환을 요청할 수 있는 상환권 + 보통주로 바꿀 수 있는 전환권을 가진 우선주</p>
+        <p>사채와 비슷하게 상환이 예정되어 있지만, 상법상 상환 시 회사에 배당가능이익이 있어야 하며 매년 이익의 일부를 상환기금으로 적립해야 합니다. 벤처캐피탈(VC)과 개인투자조합의 주요 투자수단입니다.</p></div>
+      <div class="card"><span class="en">Convertible Bond</span><h3>전환사채 (CB)</h3>
+        <p class="def">주식(보통주)으로 전환할 수 있는 선택권이 붙은 채권</p>
+        <p>발행 시에는 일반 회사채와 같지만, 일정 기간 뒤 전환권이 발동하면 투자자가 원할 때 주식으로 바꿔 기업가치 상승에 따른 차익을 기대할 수 있습니다.</p></div>
     </div>
-    <div class="qb">
-      <img class="qb-img" src="assets/img/quick-music.jpg" alt="음악 저작권 직접 매입 벤처인증기업 뮤직오너 오디오 장비" width="1024" height="1024" loading="lazy" decoding="async">
-      <a class="qb-bar" href="https://musicowner.kr/" target="_blank" rel="noopener"><span class="ico" style="background:var(--brand-red);">음악</span><span><small>안정성과 수익성을 한번에, 음악 저작권 투자</small><b>뮤직오너 바로가기</b></span><span class="ar">↗</span></a>
+
+    <div class="vdef">
+      <div><h3>우리나라 벤처기업의 개념 (법적 기준)</h3><p>기술성·성장성이 상대적으로 높아 정부 지원이 필요하다고 인정되는 기업으로, <a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EB%B2%A4%EC%B2%98%EA%B8%B0%EC%97%85%EC%9C%A1%EC%84%B1%EC%97%90%EA%B4%80%ED%95%9C%ED%8A%B9%EB%B3%84%EC%A1%B0%EC%B9%98%EB%B2%95" target="_blank" rel="noopener" class="u">「벤처기업육성에 관한 특별법」 제2조의2</a> 요건 중 1가지를 충족해 벤처기업 확인을 받은 기업입니다.</p>
+        <div class="crit"><span>벤처투자유형</span><span>연구개발유형</span><span>혁신성장유형</span><span>예비벤처기업</span></div></div>
+      <div><h3>일반적 개념</h3><p>미국에서는 위험성은 높지만 성공 시 높은 수익이 기대되는 기업으로, 일반적으로 Venture Capital(모험자본)로부터 투자를 받은 기업을 뜻합니다. 다른 나라에서는 신사업·기술집약·첨단기술기업을 가리키기도 합니다.</p></div>
     </div>
-    <div class="qb">
-      <img class="qb-img" src="assets/img/quick-kakao.jpg" alt="한국벤처경영원 평일 1:1 카카오톡 소득공제 상담 안내" width="1024" height="1024" loading="lazy" decoding="async">
-      <a class="qb-bar" href="http://pf.kakao.com/_Rgdxjb/chat" target="_blank" rel="noopener"><span class="ico" style="background:var(--brand-kakao);color:var(--brand-kakao-ink);">톡</span><span><small>평일 상담 · 담당자가 직접 답변</small><b>카카오톡 1:1 상담</b></span><span class="ar">↗</span></a>
-    </div>
+
+    <!-- 4-1 통합: 소득공제 환급 효과 & 공제율 구조 & 근거 법률 -->
+    
+
+    <!-- 4-1 통합: 국민성장펀드 비교 -->
+    
+
+    </details>
+    <nav class="ctx-links" aria-label="제도소개 관련 시뮬레이터 및 FAQ 이동">
+      <span>제도 확인 후 다음 단계</span>
+      <a href="#simulator" data-arrow="true">내 세율 기준 예상 환급액 계산기 바로가기</a>
+      <a href="#companies" data-arrow="true">투자 대상 자산군·벤처인증기업 보기</a>
+      <a href="#faq" data-arrow="true">소득공제·국민성장펀드 자주 묻는 질문</a>
+    </nav>
   </div>
 </section>
+<section class="story-tax"><div class="wrap"><div id="tax" class="sys-sub-sep">
+      <div class="sub-head" style="margin-bottom:18px">
+        <div>
+          <h2 class="story-heading">세금을 가장 많이 돌려받는 방법</h2><h3 class="story-subheading">과세표준 대비 소득공제 예상 절세액 <small>(3천만원 출자 시)</small></h3>
+        </div>
+      </div>
+      <p class="lede" style="margin-top:0">세액공제가 산출세액에서 정률(12~15%)을 차감하는 것과 달리, 소득공제는 과세표준(세금을 매기는 소득) 자체를 줄입니다. 공제금액에 선택한 한계세율을 곱하면 단순 추정치를 구할 수 있습니다. 예를 들어 3,000만원이 모두 공제되고 공제 전후 한계세율 38.5%가 유지되면 약 1,155만원입니다. 실제 환급액은 종합소득금액 한도, 과세표준 변동과 기납부세액 등에 따라 달라집니다.</p>
 
-<!-- ② 성공사례 (2-1 개인별 사례 / 2-2 그룹별 사례 · 3초 자동 전환 배너) -->
+      <div class="tax-grid">
+        <div class="card">
+          <h4>같은 3,000만원, 공제 방식별 환급액</h4>
+          <p>한계세율 38.5%(과세표준 8,800만~1.5억원) 투자자 기준</p>
+          <div class="cmp num" role="img" aria-label="3,000만원 기준 세액공제 12%는 360만원, 세액공제 15%는 450만원, 벤처투자 소득공제는 1,155만원 환급 비교">
+            <div class="cmp-row"><span>세액공제 12%</span><div class="bar"><i style="width:31%;background:var(--bar-grey)"></i></div><b>1배 · 360만원</b></div>
+            <div class="cmp-row"><span>세액공제 15%</span><div class="bar"><i style="width:39%;background:var(--bar-grey)"></i></div><b>1.25배 · 450만원</b></div>
+            <div class="cmp-row hl"><span>벤처투자 소득공제</span><div class="bar"><i style="width:100%;background:var(--lime)"></i></div><b>3.2배 · 1,155만원</b></div>
+          </div>
+          <p class="note">배수는 세액공제 12%(360만원) 대비 3.2배, 세액공제 15%(450만원) 대비 2.5배입니다. 실제 환급액은 종합소득금액 50% 한도, 기납부 세액 및 다른 소득·세액공제 항목에 따라 달라집니다.</p>
+        </div>
+        <div>
+          <table>
+            <thead><tr><th>과세표준 구간</th><th style="text-align:right">선택 한계세율</th><th style="text-align:right">단순 추정 절세액</th></tr></thead>
+            <tbody class="num" id="rateRows">
+              <tr data-i="0"><td>1,400만원 이하</td><td class="r">6.6%</td><td class="r">198만원</td></tr>
+              <tr data-i="1"><td>1,400만~5,000만원</td><td class="r">16.5%</td><td class="r">495만원</td></tr>
+              <tr data-i="2"><td>5,000만~8,800만원</td><td class="r">26.4%</td><td class="r">792만원</td></tr>
+              <tr data-i="3" class="me"><td>8,800만~1.5억원</td><td class="r">38.5%</td><td class="r">1,155만원</td></tr>
+              <tr data-i="4"><td>1.5억~3억원</td><td class="r">41.8%</td><td class="r">1,254만원</td></tr>
+              <tr data-i="5"><td>3억~5억원</td><td class="r">44%</td><td class="r">1,320만원</td></tr>
+              <tr data-i="6"><td>5억~10억원</td><td class="r">46.2%</td><td class="r">1,386만원</td></tr>
+              <tr data-i="7"><td>10억원 초과</td><td class="r">49.5%</td><td class="r">1,485만원</td></tr>
+            </tbody>
+          </table>
+          <p class="note">근거: 『소득세법』 제55조 제1항 종합소득 과세표준 구간 및 『지방세법』 제103조의3 지방소득세(소득세의 10%) 합산 세율 기준. 공제 후 과세표준 구간이 낮아질 경우 구간 경계에 따라 실효 환급액이 일부 조정될 수 있습니다.</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:28px">
+        <h4>투자금액별 소득공제 금액</h4>
+        <p>조세특례제한법 제16조 제1항: 3,000만원 이하분 100%, 3,000만~5,000만원분 70%, 5,000만원 초과분 30%</p>
+        <div class="brk" role="img" aria-label="투자금액 구간별 공제율: 3,000만원 이하 100%, 3,000만원 초과 5,000만원 이하 70%, 5,000만원 초과 30%"><div class="brk-bar"><div class="b1">100%</div><div class="b2">70%</div><div class="b3">30%</div></div>
+          <div class="brk-lab num"><span>0 ~ 3,000만원</span><span>~ 5,000만원</span><span>5,000만원 초과</span></div></div>
+        <table class="ded-table num" style="margin-top:22px">
+          <thead><tr><th>투자금</th><th>산식</th><th>소득공제 금액</th><th>실효 공제율</th></tr></thead>
+          <tbody id="dedRows">
+            <tr data-v="1000"><td><b>1,000만원</b></td><td>1,000만원×100%</td><td class="r">1,000만원</td><td class="r">100%</td></tr>
+            <tr data-v="2000"><td><b>2,000만원</b></td><td>2,000만원×100%</td><td class="r">2,000만원</td><td class="r">100%</td></tr>
+            <tr data-v="3000" class="me"><td><b>3,000만원</b></td><td>3,000만원×100%</td><td class="r">3,000만원</td><td class="r">100%</td></tr>
+            <tr data-v="5000"><td><b>5,000만원</b></td><td>3,000만원×100% + 2,000만원×70%</td><td class="r">4,400만원</td><td class="r">88%</td></tr>
+            <tr data-v="7000"><td><b>7,000만원</b></td><td>3,000만원×100% + 2,000만원×70% + 2,000만원×30%</td><td class="r">5,000만원</td><td class="r">71%</td></tr>
+            <tr data-v="10000"><td><b>1억원</b></td><td>3,000만원×100% + 2,000만원×70% + 5,000만원×30%</td><td class="r">5,900만원</td><td class="r">59%</td></tr>
+          </tbody>
+        </table>
+        <p class="note">※ 본 표는 한국벤처경영원 고유의 노하우가 반영된 콘텐츠로 무단전재·복사·재배포를 금합니다. 해당 과세연도 종합소득금액의 50% 한도가 별도 적용됩니다.</p>
+      </div>
+
+      <div class="law" id="law">
+        <div class="card">
+          <h4>벤처투자 소득공제 근거 법률</h4>
+          <p>『조세특례제한법』 제16조(벤처투자조합 출자 등에 대한 소득공제) ① 요지</p>
+          <blockquote>거주자가 해당 출자 또는 투자를 하는 경우 <mark>2028년 12월 31일까지</mark> 출자·투자한 금액 중 <mark>3천만원 이하분은 100분의 100, 3천만원 초과분부터 5천만원 이하분까지는 100분의 70, 5천만원 초과분은 100분의 30</mark>에 상당하는 금액(해당 과세연도 <mark>종합소득금액의 100분의 50</mark>을 한도)을 종합소득금액에서 공제한다. 다만 타인의 출자지분·투자지분 또는 수익증권을 양수하는 방법으로 출자·투자하는 경우에는 그러하지 아니하다.</blockquote>
+          <p class="src">개정 2025. 12. 23. 반영. 원문: <a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%A1%B0%EC%84%B8%ED%8A%B9%EB%A1%80%EC%A0%9C%ED%95%9C%EB%B2%95/%EC%A0%9C16%EC%A1%B0" target="_blank" rel="noopener" class="u">국가법령정보센터 조세특례제한법 제16조 ↗</a> · 농어촌특별세 비과세(농어촌특별세법 시행령 제4조 제1항)</p>
+        </div>
+        <div class="law-side">
+          <div class="card"><h4>공제시기 변경 (2년 내 선택)</h4><p>출자일이 속한 과세연도부터 <b>출자 후 2년이 되는 날이 속한 과세연도</b>까지 중 1과세연도를 골라 공제받을 수 있습니다. 출자·투자확인서 발급 시 투자조합관리자 또는 벤처기업에 <b>소득공제시기 변경신청서</b>를 제출합니다.</p><p class="src">근거: <a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%A1%B0%EC%84%B8%ED%8A%B9%EB%A1%80%EC%A0%9C%ED%95%9C%EB%B2%95%EC%8B%9C%ED%96%89%EB%A0%B9/%EC%A0%9C14%EC%A1%B0" target="_blank" rel="noopener" class="u">조세특례제한법 시행령 제14조 제7항 ↗</a> (신설 2020. 2. 11.)</p></div>
+          <div class="card"><h4>양도소득세 비과세 및 보유 요건</h4><p>창업 후 5년 이내, 또는 벤처기업 전환 후 3년 이내인 벤처기업에 신주 출자한 주식·출자지분은 <b>3년 경과 시 양도소득세 비과세</b>됩니다(특수관계 없는 벤처기업 출자 한함). 반대로 <b>출자 후 3년 이내 지분 이전·회수 시</b> 이미 공제받은 세액이 추징됩니다.</p><p class="src">근거: 조세특례제한법 제14조 제1항 제4호 · 제16조 제2항</p></div>
+        </div>
+      </div>
+    </div></div></section>
+<section id="simulator" class="sim" data-screen-label="04-2 소득공제 계산기">
+  <div class="wrap">
+    <div class="label">소득공제 계산기</div>
+    <h2 class="story-heading">세율 예상 환급액 계산</h2>
+    <p class="lede">과세표준 구간(한계세율)과 벤처투자 금액을 선택하면 조세특례제한법 제16조 산식에 따른 소득공제 금액과 예상 환급세액을 즉시 계산합니다.</p>
+    <div class="sim-box">
+      <div class="sim-in">
+        <div class="field">
+          <label>1단계: 과세표준 구간 (지방소득세 포함 한계세율) 선택</label>
+          <div class="presets" id="pRate">
+            <button type="button" data-i="0">6.6%<small>1,400만원 이하</small></button>
+            <button type="button" data-i="1">16.5%<small>1,400만~5,000만원</small></button>
+            <button type="button" data-i="2">26.4%<small>5,000만~8,800만원</small></button>
+            <button type="button" data-i="3" class="on">38.5%<small>8,800만~1.5억원</small></button>
+            <button type="button" data-i="4">41.8%<small>1.5억~3억원</small></button>
+            <button type="button" data-i="5">44%<small>3억~5억원</small></button>
+            <button type="button" data-i="6">46.2%<small>5억~10억원</small></button>
+            <button type="button" data-i="7">49.5%<small>10억원 초과</small></button>
+          </div>
+        </div>
+        <div class="field">
+          <label for="invest">2단계: 벤처투자 금액 선택 <b class="num" id="vInvest">3,000만원</b></label>
+          <input type="range" id="invest" min="100" max="10000" step="100" value="3000" aria-label="투자 금액 슬라이더 (100만원부터 1억원까지)">
+          <div class="presets" id="pInv">
+            <button data-v="1000">1,000만원</button><button data-v="3000" class="on">3,000만원</button><button data-v="5000">5,000만원</button><button data-v="7000">7,000만원</button><button data-v="10000">1억원</button>
+          </div>
+        </div>
+        <p class="note">산식: 3,000만원 이하분 100% + 3,000만~5,000만원분 70% + 5,000만원 초과분 30% 공제(조세특례제한법 제16조 제1항). 성과급·보너스 합산에 따른 과세표준 구간 이동과 정밀 한도 계산은 1:1 상담에서 확인해 드립니다.</p>
+      </div>
+      <div class="sim-out" aria-live="polite">
+        <div class="out-big">예상 환급액<b class="num" id="oRefund">1,155만원</b></div>
+        <div class="out-list num">
+          <div><span>소득공제 금액</span><b id="oDed">3,000만원 (100%)</b></div>
+          <div><span>적용 한계세율</span><b id="oMarg">38.5%</b></div>
+          <div><span>세액공제 15% 대비</span><b id="oX">2.6배 · 450만원 → 1,155만원</b></div>
+        </div>
+        <p class="sim-txt" id="oTxt">한계세율 38.5%인 분이 3,000만원을 벤처투자하면 3,000만원이 소득공제되어 약 1,155만원이 환급될 것으로 추정됩니다.</p>
+        <p class="note">※ 유의사항: 위 금액은 『소득공제 금액 × 선택 한계세율』로 단순 추정한 참고치입니다. 실제 환급세액은 ① 해당 과세연도 종합소득금액의 50% 한도, ② 공제 적용 후 과세표준 구간 변동 여부, ③ 본인의 기납부 결정세액 한도에 따라 달라지며, 벤처투자는 원금 손실이 발생할 수 있고 투자 수익을 보장하지 않습니다.</p>
+      </div>
+    </div>
+
+    <nav class="ctx-links dark" aria-label="환급액 계산 후 다음 단계 이동">
+      <span>계산 결과 활용하기</span>
+      <a href="#companies" data-arrow="true">투자 대상 벤처인증기업 포트폴리오 확인</a>
+      <a href="#direct-invest" data-arrow="true">개인공동투자(직접투자) 절차 확인</a>
+      <a href="#contact" data-from-sim="1" data-arrow="true">성과급·종소세 포함 1:1 정밀 공제 한도 상담</a>
+    </nav>
+  </div>
+</section>
+<section class="story-rates" id="income-tax-rates"><div class="wrap"><h2 class="story-heading">종합소득세율</h2><p class="story-caption">지방소득세를 포함한 세율 및 누진공제액</p><div class="story-table-wrap"><table><thead><tr><th>과세표준</th><th>세율</th><th>누진공제</th></tr></thead><tbody><tr><td>1,400만 원 이하</td><td>6.6%</td><td>−</td></tr><tr><td>1,400만 원 초과 ~ 5,000만 원 이하</td><td>16.5%</td><td>1,386,000원</td></tr><tr><td>5,000만 원 초과 ~ 8,800만 원 이하</td><td>26.4%</td><td>6,336,000원</td></tr><tr><td>8,800만 원 초과 ~ 1억 5,000만 원 이하</td><td>38.5%</td><td>16,984,000원</td></tr><tr><td>1억 5,000만 원 초과 ~ 3억 원 이하</td><td>41.8%</td><td>21,934,000원</td></tr><tr><td>3억 원 초과 ~ 5억 원 이하</td><td>44.0%</td><td>28,534,000원</td></tr><tr><td>5억 원 초과 ~ 10억 원 이하</td><td>46.2%</td><td>39,534,000원</td></tr><tr><td>10억 원 초과</td><td>49.5%</td><td>72,534,000원</td></tr></tbody></table></div><p class="story-caption">세법 개정 및 개인별 상황에 따라 적용 내용이 달라질 수 있습니다.</p></div></section>
 <section id="cases" class="cases-sec" data-screen-label="02 성공사례">
   <div class="wrap">
     <div class="sec-head-split">
@@ -228,7 +369,38 @@
   </div>
 </section>
 
-<!-- ③ 절세이슈 (뉴스 기사 이미지 롤링 3초 자동 전환 + 연간 절세 캘린더 결합) -->
+<section class="story-fund-news"><div class="wrap"><h2 class="story-heading">국민성장펀드 비교분석</h2><h3>국민성장펀드와 벤처투자, 어떤 차이가 있을까요?</h3><p>두 제도의 공제 방식과 투자 조건을 살펴보고 본인의 상황에 맞게 비교해 보세요.</p><a href="#system">소득공제 비교 살펴보기 →</a></div></section>
+<section class="story-comparison"><div class="wrap"><h2 class="story-heading">국민성장펀드와 벤처투자 소득공제 비교</h2><p class="story-caption">각각 3,000만원을 투자하고 공제 전후 한계세율 38.5%가 유지된다고 가정한 단순 계산 예시</p><div class="story-compare-cards"><div><h3>국민성장펀드</h3><p>3,000만원 × 가정 공제율 40%</p><b>소득공제 1,200만원</b><strong>예상 절세액 462만원</strong></div><div><h3>벤처투자 소득공제</h3><p>3,000만원 × 구간 공제율 100%</p><b>소득공제 3,000만원</b><strong>예상 절세액 1,155만원</strong></div></div><p class="story-caption">단순 예시이며 실제 공제 가능 여부와 환급액은 상품별 요건, 소득공제 한도, 과세표준 변동 및 기납부세액 등에 따라 달라집니다. 벤처투자는 원금 손실이 발생할 수 있습니다.</p><div id="system" class="sys-sub-sep">
+      <div class="sub-head" style="margin-bottom:18px">
+        <div>
+          <h3 class="sec-sm">국민성장펀드와 비교: 5,000만원 투자 시 공제액 2.75배 <small class="h-sub">4-1 제도 비교: 국민성장펀드 vs 벤처투자</small></h3>
+        </div>
+      </div>
+      <p class="lede" style="margin-top:0">아래는 제시된 조건에 따른 소득공제 금액의 비교입니다. 실제 적용 요건과 투자 위험, 자금 회수 조건은 상품과 개인 상황에 따라 다르므로 투자 전에 확인해야 합니다. 벤처투자는 1,600만원만 투자해도 국민성장펀드 5,000만원 투자와 동일한 소득공제 금액(1,600만원)이 인정됩니다.</p>
+
+      <div class="vs">
+        <div class="vs-bars num" role="img" aria-label="5,000만원 투자 시 소득공제 금액 비교: 국민성장펀드 1,600만원 대비 벤처투자 4,400만원으로 2.75배">
+          <div class="vs-row"><span>국민성장펀드</span><div class="bar tall"><i style="width:36.4%;background:var(--bar-grey-2)"></i></div><b>1,600만원</b></div>
+          <div class="vs-row"><span>벤처투자</span><div class="bar tall"><i style="width:100%;background:var(--lime)"></i></div><b>4,400만원</b></div>
+          <p class="note">5,000만원 투자 시 소득공제 금액 (2.75배 차이)</p>
+        </div>
+        <table class="vs-table">
+          <thead><tr><th>항목</th><th class="g">국민성장펀드</th><th class="l">벤처투자 소득공제</th></tr></thead>
+          <tbody>
+            <tr><td>소득공제율</td><td class="g">최대 40%</td><td class="l">3,000만원까지 100%, 5,000만원 투자 시 88%(4,400만원)</td></tr>
+            <tr><td>종합한도(2,500만원)</td><td class="g">포함 (조세특례제한법 제132조의2)</td><td class="l">대상 아님 · 종합소득금액의 50% 별도 한도</td></tr>
+            <tr><td>환매·보유 기간</td><td class="g">5년 폐쇄형, 중도환매 불가</td><td class="l">조합 규약에 따름 (소득공제 유지 의무 보유기간 3년)</td></tr>
+            <tr><td>가입 제한</td><td class="g">금융소득종합과세 대상자 제외, 소득확인증명서 필요</td><td class="l">금융소득종합과세 대상자도 종합소득 내 공제 가능 (개별 확인)</td></tr>
+            <tr><td>투자 한도</td><td class="g">연 1억원, 5년 총 2억원</td><td class="l">출자액 제한 없음 (공제는 종합소득금액 50% 한도)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="limit card">
+        <h4>소득공제 한도, 정확히 알기 (조세특례제한법 제132조의2)</h4>
+        <p>개인별 연간 소득공제 종합한도는 <b>2,500만원 하나</b>이며, 신용카드·주택청약 등 일반 공제 항목이 여기에 합산됩니다. 반면 <b>벤처투자 소득공제(조세특례제한법 제16조)는 종합한도(2,500만원) 적용 제외 항목</b>으로 분류되어, 기존 공제 한도가 모두 찬 고소득자도 본인 <b>종합소득금액의 50% 한도</b>까지 추가로 소득공제를 받을 수 있습니다.</p>
+      </div>
+    </div></div></section>
 <section id="issues" class="issues-sec iv" data-screen-label="03 절세이슈">
   <div class="wrap">
     <div class="sec-head-split">
@@ -298,203 +470,25 @@
   </script>
 </section>
 
+
+
+<!-- ①-b 홈 하단 퀵링크 (유지) -->
+
+
+<!-- ② 성공사례 (2-1 개인별 사례 / 2-2 그룹별 사례 · 3초 자동 전환 배너) -->
+
+
+<!-- ③ 절세이슈 (뉴스 기사 이미지 롤링 3초 자동 전환 + 연간 절세 캘린더 결합) -->
+
+
 <!-- ④ 제도소개 (4-1 제도 [벤처투자+소득공제+국민성장펀드 비교 통합] / 4-2 소득공제 계산기) -->
-<section id="system-intro" class="venture" data-screen-label="04-1 제도소개 (벤처투자·소득공제 통합)">
-  <div class="wrap">
-    <div class="label">제도소개</div>
-    <h2 class="sec">벤처인증기업에 투자하면, 정부가 세금으로 돌려줍니다</h2>
-    <p class="lede">『조세특례제한법』 제16조 및 『벤처투자 촉진에 관한 법률』에 따라 거주자 개인이 개인공동투자(직접투자) 또는 개인투자조합(간접투자)에 출자해 벤처인증기업에 투자하는 경우, 출자·투자 금액을 종합소득금액(50% 한도)에서 소득공제하여 세금을 환급합니다. 단, 타인의 기존 출자지분·구주를 양수하는 투자는 공제 대상에서 제외됩니다.</p>
 
-    <h3 class="sr-sub">벤처투자 소득공제 3단계 구조</h3>
-    <div class="v-flow">
-      <div class="v-node"><span class="k">투자자</span><h4>개인 출자</h4><p>근로소득자·사업소득자·전문직 등 국내 거주자 개인</p></div>
-      <div class="v-arrow" aria-hidden="true"></div>
-      <div class="v-node"><span class="k">투자 방식</span><h4>직접 또는 간접</h4>
-        <div class="v-two"><div><b>개인투자조합</b>간접투자 · GP 유스업파트너스(주)</div><div><b>개인공동투자</b>직접투자 · <a href="#direct-invest" style="color:var(--violet);text-decoration:underline">개인공동투자 절차 안내 ↓</a></div></div></div>
-      <div class="v-arrow" aria-hidden="true"></div>
-      <div class="v-node end"><span class="k">투자 대상</span><h4>벤처인증기업</h4><p>상환전환우선주(RCPS), 전환사채(CB), 신주 등으로 투자하고, 투자자는 구간별 최대 100%를 소득공제 받습니다.</p></div>
-    </div>
-
-    <div class="instr">
-      <div class="card"><span class="en">Redeemable Convertible Preference Shares</span><h3>상환전환우선주 (RCPS)</h3>
-        <p class="def">만기 때 투자금 상환을 요청할 수 있는 상환권 + 보통주로 바꿀 수 있는 전환권을 가진 우선주</p>
-        <p>사채와 비슷하게 상환이 예정되어 있지만, 상법상 상환 시 회사에 배당가능이익이 있어야 하며 매년 이익의 일부를 상환기금으로 적립해야 합니다. 벤처캐피탈(VC)과 개인투자조합의 주요 투자수단입니다.</p></div>
-      <div class="card"><span class="en">Convertible Bond</span><h3>전환사채 (CB)</h3>
-        <p class="def">주식(보통주)으로 전환할 수 있는 선택권이 붙은 채권</p>
-        <p>발행 시에는 일반 회사채와 같지만, 일정 기간 뒤 전환권이 발동하면 투자자가 원할 때 주식으로 바꿔 기업가치 상승에 따른 차익을 기대할 수 있습니다.</p></div>
-    </div>
-
-    <div class="vdef">
-      <div><h3>우리나라 벤처기업의 개념 (법적 기준)</h3><p>기술성·성장성이 상대적으로 높아 정부 지원이 필요하다고 인정되는 기업으로, <a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EB%B2%A4%EC%B2%98%EA%B8%B0%EC%97%85%EC%9C%A1%EC%84%B1%EC%97%90%EA%B4%80%ED%95%9C%ED%8A%B9%EB%B3%84%EC%A1%B0%EC%B9%98%EB%B2%95" target="_blank" rel="noopener" class="u">「벤처기업육성에 관한 특별법」 제2조의2</a> 요건 중 1가지를 충족해 벤처기업 확인을 받은 기업입니다.</p>
-        <div class="crit"><span>벤처투자유형</span><span>연구개발유형</span><span>혁신성장유형</span><span>예비벤처기업</span></div></div>
-      <div><h3>일반적 개념</h3><p>미국에서는 위험성은 높지만 성공 시 높은 수익이 기대되는 기업으로, 일반적으로 Venture Capital(모험자본)로부터 투자를 받은 기업을 뜻합니다. 다른 나라에서는 신사업·기술집약·첨단기술기업을 가리키기도 합니다.</p></div>
-    </div>
-
-    <!-- 4-1 통합: 소득공제 환급 효과 & 공제율 구조 & 근거 법률 -->
-    <div id="tax" class="sys-sub-sep">
-      <div class="sub-head" style="margin-bottom:18px">
-        <div>
-          <h3 class="sec-sm">3,000만원 투자 시 단순 추정 절세액 1,155만원 <small class="h-sub">4-1 제도 상세: 환급 구조</small></h3>
-        </div>
-      </div>
-      <p class="lede" style="margin-top:0">세액공제가 산출세액에서 정률(12~15%)을 차감하는 것과 달리, 소득공제는 과세표준(세금을 매기는 소득) 자체를 줄입니다. 공제금액에 선택한 한계세율을 곱하면 단순 추정치를 구할 수 있습니다. 예를 들어 3,000만원이 모두 공제되고 공제 전후 한계세율 38.5%가 유지되면 약 1,155만원입니다. 실제 환급액은 종합소득금액 한도, 과세표준 변동과 기납부세액 등에 따라 달라집니다.</p>
-
-      <div class="tax-grid">
-        <div class="card">
-          <h4>같은 3,000만원, 공제 방식별 환급액</h4>
-          <p>한계세율 38.5%(과세표준 8,800만~1.5억원) 투자자 기준</p>
-          <div class="cmp num" role="img" aria-label="3,000만원 기준 세액공제 12%는 360만원, 세액공제 15%는 450만원, 벤처투자 소득공제는 1,155만원 환급 비교">
-            <div class="cmp-row"><span>세액공제 12%</span><div class="bar"><i style="width:31%;background:var(--bar-grey)"></i></div><b>1배 · 360만원</b></div>
-            <div class="cmp-row"><span>세액공제 15%</span><div class="bar"><i style="width:39%;background:var(--bar-grey)"></i></div><b>1.25배 · 450만원</b></div>
-            <div class="cmp-row hl"><span>벤처투자 소득공제</span><div class="bar"><i style="width:100%;background:var(--lime)"></i></div><b>3.2배 · 1,155만원</b></div>
-          </div>
-          <p class="note">배수는 세액공제 12%(360만원) 대비 3.2배, 세액공제 15%(450만원) 대비 2.5배입니다. 실제 환급액은 종합소득금액 50% 한도, 기납부 세액 및 다른 소득·세액공제 항목에 따라 달라집니다.</p>
-        </div>
-        <div>
-          <table>
-            <thead><tr><th>과세표준 구간</th><th style="text-align:right">선택 한계세율</th><th style="text-align:right">단순 추정 절세액</th></tr></thead>
-            <tbody class="num" id="rateRows">
-              <tr data-i="0"><td>1,400만원 이하</td><td class="r">6.6%</td><td class="r">198만원</td></tr>
-              <tr data-i="1"><td>1,400만~5,000만원</td><td class="r">16.5%</td><td class="r">495만원</td></tr>
-              <tr data-i="2"><td>5,000만~8,800만원</td><td class="r">26.4%</td><td class="r">792만원</td></tr>
-              <tr data-i="3" class="me"><td>8,800만~1.5억원</td><td class="r">38.5%</td><td class="r">1,155만원</td></tr>
-              <tr data-i="4"><td>1.5억~3억원</td><td class="r">41.8%</td><td class="r">1,254만원</td></tr>
-              <tr data-i="5"><td>3억~5억원</td><td class="r">44%</td><td class="r">1,320만원</td></tr>
-              <tr data-i="6"><td>5억~10억원</td><td class="r">46.2%</td><td class="r">1,386만원</td></tr>
-              <tr data-i="7"><td>10억원 초과</td><td class="r">49.5%</td><td class="r">1,485만원</td></tr>
-            </tbody>
-          </table>
-          <p class="note">근거: 『소득세법』 제55조 제1항 종합소득 과세표준 구간 및 『지방세법』 제103조의3 지방소득세(소득세의 10%) 합산 세율 기준. 공제 후 과세표준 구간이 낮아질 경우 구간 경계에 따라 실효 환급액이 일부 조정될 수 있습니다.</p>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:28px">
-        <h4>투자금액별 소득공제 금액</h4>
-        <p>조세특례제한법 제16조 제1항: 3,000만원 이하분 100%, 3,000만~5,000만원분 70%, 5,000만원 초과분 30%</p>
-        <div class="brk" role="img" aria-label="투자금액 구간별 공제율: 3,000만원 이하 100%, 3,000만원 초과 5,000만원 이하 70%, 5,000만원 초과 30%"><div class="brk-bar"><div class="b1">100%</div><div class="b2">70%</div><div class="b3">30%</div></div>
-          <div class="brk-lab num"><span>0 ~ 3,000만원</span><span>~ 5,000만원</span><span>5,000만원 초과</span></div></div>
-        <table class="ded-table num" style="margin-top:22px">
-          <thead><tr><th>투자금</th><th>산식</th><th>소득공제 금액</th><th>실효 공제율</th></tr></thead>
-          <tbody id="dedRows">
-            <tr data-v="1000"><td><b>1,000만원</b></td><td>1,000만원×100%</td><td class="r">1,000만원</td><td class="r">100%</td></tr>
-            <tr data-v="2000"><td><b>2,000만원</b></td><td>2,000만원×100%</td><td class="r">2,000만원</td><td class="r">100%</td></tr>
-            <tr data-v="3000" class="me"><td><b>3,000만원</b></td><td>3,000만원×100%</td><td class="r">3,000만원</td><td class="r">100%</td></tr>
-            <tr data-v="5000"><td><b>5,000만원</b></td><td>3,000만원×100% + 2,000만원×70%</td><td class="r">4,400만원</td><td class="r">88%</td></tr>
-            <tr data-v="7000"><td><b>7,000만원</b></td><td>3,000만원×100% + 2,000만원×70% + 2,000만원×30%</td><td class="r">5,000만원</td><td class="r">71%</td></tr>
-            <tr data-v="10000"><td><b>1억원</b></td><td>3,000만원×100% + 2,000만원×70% + 5,000만원×30%</td><td class="r">5,900만원</td><td class="r">59%</td></tr>
-          </tbody>
-        </table>
-        <p class="note">※ 본 표는 한국벤처경영원 고유의 노하우가 반영된 콘텐츠로 무단전재·복사·재배포를 금합니다. 해당 과세연도 종합소득금액의 50% 한도가 별도 적용됩니다.</p>
-      </div>
-
-      <div class="law" id="law">
-        <div class="card">
-          <h4>벤처투자 소득공제 근거 법률</h4>
-          <p>『조세특례제한법』 제16조(벤처투자조합 출자 등에 대한 소득공제) ① 요지</p>
-          <blockquote>거주자가 해당 출자 또는 투자를 하는 경우 <mark>2028년 12월 31일까지</mark> 출자·투자한 금액 중 <mark>3천만원 이하분은 100분의 100, 3천만원 초과분부터 5천만원 이하분까지는 100분의 70, 5천만원 초과분은 100분의 30</mark>에 상당하는 금액(해당 과세연도 <mark>종합소득금액의 100분의 50</mark>을 한도)을 종합소득금액에서 공제한다. 다만 타인의 출자지분·투자지분 또는 수익증권을 양수하는 방법으로 출자·투자하는 경우에는 그러하지 아니하다.</blockquote>
-          <p class="src">개정 2025. 12. 23. 반영. 원문: <a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%A1%B0%EC%84%B8%ED%8A%B9%EB%A1%80%EC%A0%9C%ED%95%9C%EB%B2%95/%EC%A0%9C16%EC%A1%B0" target="_blank" rel="noopener" class="u">국가법령정보센터 조세특례제한법 제16조 ↗</a> · 농어촌특별세 비과세(농어촌특별세법 시행령 제4조 제1항)</p>
-        </div>
-        <div class="law-side">
-          <div class="card"><h4>공제시기 변경 (2년 내 선택)</h4><p>출자일이 속한 과세연도부터 <b>출자 후 2년이 되는 날이 속한 과세연도</b>까지 중 1과세연도를 골라 공제받을 수 있습니다. 출자·투자확인서 발급 시 투자조합관리자 또는 벤처기업에 <b>소득공제시기 변경신청서</b>를 제출합니다.</p><p class="src">근거: <a href="https://www.law.go.kr/%EB%B2%95%EB%A0%B9/%EC%A1%B0%EC%84%B8%ED%8A%B9%EB%A1%80%EC%A0%9C%ED%95%9C%EB%B2%95%EC%8B%9C%ED%96%89%EB%A0%B9/%EC%A0%9C14%EC%A1%B0" target="_blank" rel="noopener" class="u">조세특례제한법 시행령 제14조 제7항 ↗</a> (신설 2020. 2. 11.)</p></div>
-          <div class="card"><h4>양도소득세 비과세 및 보유 요건</h4><p>창업 후 5년 이내, 또는 벤처기업 전환 후 3년 이내인 벤처기업에 신주 출자한 주식·출자지분은 <b>3년 경과 시 양도소득세 비과세</b>됩니다(특수관계 없는 벤처기업 출자 한함). 반대로 <b>출자 후 3년 이내 지분 이전·회수 시</b> 이미 공제받은 세액이 추징됩니다.</p><p class="src">근거: 조세특례제한법 제14조 제1항 제4호 · 제16조 제2항</p></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 4-1 통합: 국민성장펀드 비교 -->
-    <div id="system" class="sys-sub-sep">
-      <div class="sub-head" style="margin-bottom:18px">
-        <div>
-          <h3 class="sec-sm">국민성장펀드와 비교: 5,000만원 투자 시 공제액 2.75배 <small class="h-sub">4-1 제도 비교: 국민성장펀드 vs 벤처투자</small></h3>
-        </div>
-      </div>
-      <p class="lede" style="margin-top:0">아래는 제시된 조건에 따른 소득공제 금액의 비교입니다. 실제 적용 요건과 투자 위험, 자금 회수 조건은 상품과 개인 상황에 따라 다르므로 투자 전에 확인해야 합니다. 벤처투자는 1,600만원만 투자해도 국민성장펀드 5,000만원 투자와 동일한 소득공제 금액(1,600만원)이 인정됩니다.</p>
-
-      <div class="vs">
-        <div class="vs-bars num" role="img" aria-label="5,000만원 투자 시 소득공제 금액 비교: 국민성장펀드 1,600만원 대비 벤처투자 4,400만원으로 2.75배">
-          <div class="vs-row"><span>국민성장펀드</span><div class="bar tall"><i style="width:36.4%;background:var(--bar-grey-2)"></i></div><b>1,600만원</b></div>
-          <div class="vs-row"><span>벤처투자</span><div class="bar tall"><i style="width:100%;background:var(--lime)"></i></div><b>4,400만원</b></div>
-          <p class="note">5,000만원 투자 시 소득공제 금액 (2.75배 차이)</p>
-        </div>
-        <table class="vs-table">
-          <thead><tr><th>항목</th><th class="g">국민성장펀드</th><th class="l">벤처투자 소득공제</th></tr></thead>
-          <tbody>
-            <tr><td>소득공제율</td><td class="g">최대 40%</td><td class="l">3,000만원까지 100%, 5,000만원 투자 시 88%(4,400만원)</td></tr>
-            <tr><td>종합한도(2,500만원)</td><td class="g">포함 (조세특례제한법 제132조의2)</td><td class="l">대상 아님 · 종합소득금액의 50% 별도 한도</td></tr>
-            <tr><td>환매·보유 기간</td><td class="g">5년 폐쇄형, 중도환매 불가</td><td class="l">조합 규약에 따름 (소득공제 유지 의무 보유기간 3년)</td></tr>
-            <tr><td>가입 제한</td><td class="g">금융소득종합과세 대상자 제외, 소득확인증명서 필요</td><td class="l">금융소득종합과세 대상자도 종합소득 내 공제 가능 (개별 확인)</td></tr>
-            <tr><td>투자 한도</td><td class="g">연 1억원, 5년 총 2억원</td><td class="l">출자액 제한 없음 (공제는 종합소득금액 50% 한도)</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="limit card">
-        <h4>소득공제 한도, 정확히 알기 (조세특례제한법 제132조의2)</h4>
-        <p>개인별 연간 소득공제 종합한도는 <b>2,500만원 하나</b>이며, 신용카드·주택청약 등 일반 공제 항목이 여기에 합산됩니다. 반면 <b>벤처투자 소득공제(조세특례제한법 제16조)는 종합한도(2,500만원) 적용 제외 항목</b>으로 분류되어, 기존 공제 한도가 모두 찬 고소득자도 본인 <b>종합소득금액의 50% 한도</b>까지 추가로 소득공제를 받을 수 있습니다.</p>
-      </div>
-    </div>
-
-    <nav class="ctx-links" aria-label="제도소개 관련 시뮬레이터 및 FAQ 이동">
-      <span>제도 확인 후 다음 단계</span>
-      <a href="#simulator" data-arrow="true">내 세율 기준 예상 환급액 계산기 바로가기</a>
-      <a href="#companies" data-arrow="true">투자 대상 자산군·벤처인증기업 보기</a>
-      <a href="#faq" data-arrow="true">소득공제·국민성장펀드 자주 묻는 질문</a>
-    </nav>
-  </div>
-</section>
 
 <!-- ④-2 소득공제 계산기 (시뮬레이터) -->
-<section id="simulator" class="sim" data-screen-label="04-2 소득공제 계산기">
-  <div class="wrap">
-    <div class="label">소득공제 계산기</div>
-    <h2 class="sec">내 세율로 예상 환급액 계산</h2>
-    <p class="lede">과세표준 구간(한계세율)과 벤처투자 금액을 선택하면 조세특례제한법 제16조 산식에 따른 소득공제 금액과 예상 환급세액을 즉시 계산합니다.</p>
-    <div class="sim-box">
-      <div class="sim-in">
-        <div class="field">
-          <label>1단계: 과세표준 구간 (지방소득세 포함 한계세율) 선택</label>
-          <div class="presets" id="pRate">
-            <button type="button" data-i="0">6.6%<small>1,400만원 이하</small></button>
-            <button type="button" data-i="1">16.5%<small>1,400만~5,000만원</small></button>
-            <button type="button" data-i="2">26.4%<small>5,000만~8,800만원</small></button>
-            <button type="button" data-i="3" class="on">38.5%<small>8,800만~1.5억원</small></button>
-            <button type="button" data-i="4">41.8%<small>1.5억~3억원</small></button>
-            <button type="button" data-i="5">44%<small>3억~5억원</small></button>
-            <button type="button" data-i="6">46.2%<small>5억~10억원</small></button>
-            <button type="button" data-i="7">49.5%<small>10억원 초과</small></button>
-          </div>
-        </div>
-        <div class="field">
-          <label for="invest">2단계: 벤처투자 금액 선택 <b class="num" id="vInvest">3,000만원</b></label>
-          <input type="range" id="invest" min="100" max="10000" step="100" value="3000" aria-label="투자 금액 슬라이더 (100만원부터 1억원까지)">
-          <div class="presets" id="pInv">
-            <button data-v="1000">1,000만원</button><button data-v="3000" class="on">3,000만원</button><button data-v="5000">5,000만원</button><button data-v="7000">7,000만원</button><button data-v="10000">1억원</button>
-          </div>
-        </div>
-        <p class="note">산식: 3,000만원 이하분 100% + 3,000만~5,000만원분 70% + 5,000만원 초과분 30% 공제(조세특례제한법 제16조 제1항). 성과급·보너스 합산에 따른 과세표준 구간 이동과 정밀 한도 계산은 1:1 상담에서 확인해 드립니다.</p>
-      </div>
-      <div class="sim-out" aria-live="polite">
-        <div class="out-big">예상 환급액<b class="num" id="oRefund">1,155만원</b></div>
-        <div class="out-list num">
-          <div><span>소득공제 금액</span><b id="oDed">3,000만원 (100%)</b></div>
-          <div><span>적용 한계세율</span><b id="oMarg">38.5%</b></div>
-          <div><span>세액공제 15% 대비</span><b id="oX">2.6배 · 450만원 → 1,155만원</b></div>
-        </div>
-        <p class="sim-txt" id="oTxt">한계세율 38.5%인 분이 3,000만원을 벤처투자하면 3,000만원이 소득공제되어 약 1,155만원이 환급될 것으로 추정됩니다.</p>
-        <p class="note">※ 유의사항: 위 금액은 『소득공제 금액 × 선택 한계세율』로 단순 추정한 참고치입니다. 실제 환급세액은 ① 해당 과세연도 종합소득금액의 50% 한도, ② 공제 적용 후 과세표준 구간 변동 여부, ③ 본인의 기납부 결정세액 한도에 따라 달라지며, 벤처투자는 원금 손실이 발생할 수 있고 투자 수익을 보장하지 않습니다.</p>
-      </div>
-    </div>
 
-    <nav class="ctx-links dark" aria-label="환급액 계산 후 다음 단계 이동">
-      <span>계산 결과 활용하기</span>
-      <a href="#companies" data-arrow="true">투자 대상 벤처인증기업 포트폴리오 확인</a>
-      <a href="#direct-invest" data-arrow="true">개인공동투자(직접투자) 절차 확인</a>
-      <a href="#contact" data-from-sim="1" data-arrow="true">성과급·종소세 포함 1:1 정밀 공제 한도 상담</a>
-    </nav>
-  </div>
-</section>
 
 <!-- ⑤ 투자기업 (포트폴리오 · 자산군 · 관계기업 소개 + 파트너사) -->
+<section class="story-assets"><div class="wrap"><h2 class="story-heading">안정자산 보유 벤처인증기업</h2><div class="story-assets-grid"><a href="#companies"><span>부동산</span><b>주거 자산 관련 기업</b><img src="assets/img/quick-house.jpg" alt=""><small>자세히 보기 →</small></a><a href="#companies"><span>미국 국채</span><b>미국 국채 관련 기업</b><div class="story-dollar" aria-hidden="true">$</div><small>자세히 보기 →</small></a><a href="#companies"><span>음악저작권</span><b>음악저작권 관련 기업</b><img src="assets/img/quick-music.jpg" alt=""><small>자세히 보기 →</small></a></div><p class="story-caption">투자 대상 기업의 자산 구성과 투자 조건을 확인하세요. 벤처투자는 원금 손실이 발생할 수 있습니다.</p></div></section>
 <section id="companies" class="group" data-screen-label="05 투자기업">
   <div class="wrap">
     <div class="label">투자기업</div>
@@ -614,6 +608,22 @@
 </section>
 
 <!-- ⑥ 개인공동투자 (신설 독립 섹션 · 직접투자 방식 안내) -->
+<section class="quick" data-screen-label="01b 홈 하단 퀵링크">
+  <div class="wrap quick-grid">
+    <div class="qb">
+      <img class="qb-img" src="assets/img/quick-house.jpg" alt="청년 주거지원 부동산벤처기업 한국청년주택 실내 공간" width="1024" height="1024" loading="lazy" decoding="async">
+      <a class="qb-bar" href="https://www.youthhousing.co.kr/" target="_blank" rel="noopener"><span class="ico" style="background:var(--brand-blue);">주택</span><span><small>청년주거지원을 위한 사회적 성격 부동산벤처기업</small><b>한국청년주택 바로가기</b></span><span class="ar">↗</span></a>
+    </div>
+    <div class="qb">
+      <img class="qb-img" src="assets/img/quick-music.jpg" alt="음악 저작권 직접 매입 벤처인증기업 뮤직오너 오디오 장비" width="1024" height="1024" loading="lazy" decoding="async">
+      <a class="qb-bar" href="https://musicowner.kr/" target="_blank" rel="noopener"><span class="ico" style="background:var(--brand-red);">음악</span><span><small>안정성과 수익성을 한번에, 음악 저작권 투자</small><b>뮤직오너 바로가기</b></span><span class="ar">↗</span></a>
+    </div>
+    <div class="qb">
+      <img class="qb-img" src="assets/img/quick-kakao.jpg" alt="한국벤처경영원 평일 1:1 카카오톡 소득공제 상담 안내" width="1024" height="1024" loading="lazy" decoding="async">
+      <a class="qb-bar" href="http://pf.kakao.com/_Rgdxjb/chat" target="_blank" rel="noopener"><span class="ico" style="background:var(--brand-kakao);color:var(--brand-kakao-ink);">톡</span><span><small>평일 상담 · 담당자가 직접 답변</small><b>카카오톡 1:1 상담</b></span><span class="ar">↗</span></a>
+    </div>
+  </div>
+</section>
 <section id="direct-invest" class="direct-sec" data-screen-label="06 개인공동투자">
   <div class="wrap">
     <div class="sec-head-split">
@@ -719,6 +729,37 @@
     </nav>
   </div>
 </section>
+<!-- 콘티 16: 개인투자조합 제도 안내 -->
+<section id="investment-partnership" class="story-bottom-section">
+  <div class="wrap">
+    <h2 class="story-bottom-heading">개인투자조합 제도 안내</h2>
+    <p class="story-bottom-intro">개인투자조합의 결성·운용 조건은 관련 법령과 조합규약을 통해 확인할 수 있습니다.</p>
+    <h3 class="story-bottom-subheading">개인투자조합의 결성조건</h3>
+    <div class="story-bottom-table-wrap">
+      <table class="story-bottom-table">
+        <tbody>
+          <tr><th scope="row">조합원 모집</th><td>모집 대상과 방식, 출자금액을 확인합니다.</td></tr>
+          <tr><th scope="row">조합원 자격</th><td>출자 자격과 참여 절차를 확인합니다.</td></tr>
+          <tr><th scope="row">조합원 구성</th><td>업무집행조합원과 일반조합원의 역할을 확인합니다.</td></tr>
+          <tr><th scope="row">조합 존속기간</th><td>존속기간과 해산 조건을 조합규약에서 확인합니다.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="story-bottom-note">구체적인 요건은 관련 법령과 개별 조합의 규약을 확인해 주세요. <a href="https://www.law.go.kr/법령/벤처투자촉진에관한법률" target="_blank" rel="noopener noreferrer">벤처투자 촉진에 관한 법률 보기 ↗</a></p>
+    <div class="story-bottom-cautions">
+      <h3 class="story-bottom-subheading">벤처투자 유의사항</h3>
+      <ol>
+        <li>투자 대상 기업의 사업과 재무 현황을 확인하세요.</li>
+        <li>업무집행조합원의 투자 경험과 역할을 확인하세요.</li>
+        <li>조합규약과 투자 조건을 충분히 검토하세요.</li>
+        <li>투자금의 회수 조건과 예상 기간을 확인하세요.</li>
+        <li>벤처투자는 원금 손실이 발생할 수 있습니다.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+
 
 <!-- ⑦ FAQ (메뉴명 'FAQ'로 단순화 · 분야별 검색형 아코디언) -->
 <section id="faq" data-screen-label="07 FAQ">
@@ -952,6 +993,44 @@
 </section>
 
 </main>
+
+<!-- 콘티 17: 사이트맵 -->
+<section id="sitemap" class="story-bottom-section story-sitemap">
+  <div class="wrap">
+    <h2 class="story-bottom-heading">사이트맵</h2>
+    <nav class="story-sitemap-grid" aria-label="사이트맵">
+      <div><h3><a href="#system-intro">소득공제 벤처투자</a></h3><ul><li><a href="#system-intro">소득공제 벤처투자 소개</a></li><li><a href="#tax">소득공제 환급세액</a></li><li><a href="#simulator">소득공제 계산기</a></li><li><a href="#income-tax-rates">종합소득세 세율</a></li></ul></div>
+      <div><h3><a href="#cases">소득공제 절세사례</a></h3><ul><li><a href="#cases-personal">소득공제 절세사례</a></li><li><a href="#case-directory">소득공제 사례보기</a></li><li><a href="#cases-group">그룹별 소득공제 사례</a></li></ul></div>
+      <div><h3><a href="#system">국민성장펀드 비교분석</a></h3><ul><li><a href="#system">국민성장펀드 비교분석</a></li><li><a href="#system">국민성장펀드 비교분석</a></li></ul></div>
+      <div><h3><a href="#issues">성과급 세금절세</a></h3></div>
+      <div><h3><a href="#companies">안정자산 보유 벤처인증기업</a></h3><ul><li><a href="#companies">부동산 자산기업</a></li><li><a href="#companies">미국국채 투자기업</a></li><li><a href="#companies">음악저작권 자산기업</a></li></ul></div>
+      <div><h3><a href="#direct-invest">투자방법</a></h3><ul><li><a href="#direct-invest">개인공동투자</a></li><li><a href="#investment-partnership">개인투자조합</a></li></ul></div>
+      <div><h3><a href="#faq">FAQ</a></h3></div>
+      <div><h3><a href="#news">언론보도</a></h3></div>
+    </nav>
+  </div>
+</section>
+<style>
+  .story-bottom-section{padding:88px 0;background:#fff;color:#333}
+  .story-bottom-heading{margin:0 0 24px;padding:0 0 22px;border-bottom:4px solid #075df1;font-size:clamp(30px,3.1vw,52px);line-height:1.2;font-weight:800;letter-spacing:-.04em}
+  .story-bottom-intro,.story-bottom-note{color:#565e6a;font-size:15px;line-height:1.7}
+  .story-bottom-subheading{margin:32px 0 14px;font-size:20px;font-weight:750}
+  .story-bottom-table{width:100%;border-collapse:collapse;font-size:16px;line-height:1.6}
+  .story-bottom-table th,.story-bottom-table td{padding:15px 20px;border:1px solid white}
+  .story-bottom-table th{width:24%;background:#075df1;color:#fff;text-align:center}
+  .story-bottom-table td{background:#e7e8ea}
+  .story-bottom-note a{color:#0754bc;text-decoration:underline;text-underline-offset:3px}
+  .story-bottom-cautions{margin-top:32px;padding-top:6px;border-top:1px solid #d9dee5}
+  .story-bottom-cautions ol{margin:0;padding-left:1.5em;color:#444;line-height:2.1}
+  .story-sitemap-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));row-gap:60px;padding-top:30px}
+  .story-sitemap-grid>div{min-height:160px;padding:0 24px;text-align:center;border-right:1px solid #d8dde3}
+  .story-sitemap-grid>div:nth-child(4n){border-right:0}
+  .story-sitemap-grid h3{margin:0 0 20px;font-size:19px;line-height:1.35;font-weight:750}
+  .story-sitemap-grid ul{display:grid;gap:12px;margin:0;padding:0;list-style:none;font-size:15px;color:#60656c}
+  .story-sitemap-grid a{color:inherit;text-decoration:none}
+  .story-sitemap-grid a:hover,.story-sitemap-grid a:focus-visible{color:#075df1;text-decoration:underline;text-underline-offset:3px}
+  @media(max-width:700px){.story-bottom-section{padding:60px 0}.story-bottom-table{font-size:14px}.story-bottom-table th,.story-bottom-table td{padding:12px 10px}.story-bottom-table th{width:30%}.story-sitemap-grid{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:32px}.story-sitemap-grid>div{min-height:120px;padding:0 12px}.story-sitemap-grid>div:nth-child(2n){border-right:0}.story-sitemap-grid h3{font-size:17px}.story-sitemap-grid ul{font-size:14px}}
+</style>
 
 <footer>
   <div class="wrap">
