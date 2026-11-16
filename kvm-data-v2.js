@@ -15,117 +15,42 @@ window.KVM_METRICS = {
 /* ②-1 개인별 성공사례 (전산 추출 + 관리자 승인 후 노출) */
 window.KVM_CASES_PERSONAL = [
   {
-    id: 'p1',
-    maskedName: '곽○삼 님',
-    company: 'SK하이닉스',
-    logoText: 'SK hynix',
-    logoColor: '#c6281f',
-    taxBase: '과세표준 1억 2천만원',
-    marginalRate: '38.5%',
-    totalRefund: '누적환급 7천만원',
-    investSummary: '5개년 연속 출자 · 재출자 4회',
-    comment: '“성과급 시즌마다 세금 부담이 컸는데, 매년 연말 한도 진단을 통해 안정형 자산 기업에 꾸준히 출자하며 누적 7천만원 이상 환급받았습니다.”',
-    consentScope: '성만 표기 / 가운데 글자 ○ 처리 / 소속 기업명 동의',
-    visible: true
+    id: 'p1', maskedName: '김○한 님', company: 'S기업 부장급', logoText: 'S기업', logoColor: '#172da6',
+    taxBase: '8,800만원 이상', marginalRate: '38.5%', totalRefund: '1억 2,505만원',
+    investSummary: '10년 연속 재투자 · 3천만원 3회, 이후 상환자금으로 재투자',
+    comment: '“매년 3천만원 투자로 1,155만원 환급받다 보니 어느새 환급 금액만 1억이 넘어요.”',
+    consentScope: '콘티 예시 · 사실관계 및 게시 동의 확인 필요', visible: true,
+    detailMetrics: [['누적 환급세액','1억 2,505만원'], ['총 투자금액','9,000만원'], ['과세표준','8,800만원 이상']],
+    detailNote: '콘티에 기재된 예시입니다. 실제 투자·환급 내역 및 게시 동의 확인이 필요합니다.'
   },
   {
-    id: 'p2',
-    maskedName: '김○현 님',
-    company: '삼성전자',
-    logoText: 'SAMSUNG',
-    logoColor: '#1428a0',
-    taxBase: '과세표준 1억 8천만원',
-    marginalRate: '41.8%',
-    totalRefund: '누적환급 5,480만원',
-    investSummary: '3개년 연속 출자 · 증액 출자',
-    comment: '“3,000만원 100% 소득공제 구간부터 시작해 연말정산 환급 효과를 직접 확인한 뒤, 다음 해부터 5,000만원으로 증액하여 절세 효과를 극대화했습니다.”',
-    consentScope: '성만 표기 / 가운데 글자 ○ 처리 / 소속 기업명 동의',
-    visible: true
+    id: 'p2', maskedName: '곽○삼 님', company: 'S기업 부장급', logoText: 'S기업', logoColor: '#f58220',
+    taxBase: '5억원 초과', marginalRate: '46.2%', totalRefund: '2,033만원',
+    investSummary: '성과급 세금부담 · 2천만원에서 5천만원으로 증액',
+    comment: '“성과급 세금부담으로 5천만원 투자가 필수가 되었네요. 1,505만원 추가 환급으로 세금 부담을 줄일 수 있었죠.”',
+    consentScope: '콘티 예시 · 사실관계 및 게시 동의 확인 필요', visible: true,
+    detailMetrics: [['성과급 과세표준','5억원 초과 (46.2%)'], ['투자금액','5천만원'], ['예상 환급세액','2,033만원'], ['기존 투자 예시','2천만원 · 528만원']],
+    detailNote: '환급액은 콘티의 단순 예시이며 실제 공제 한도, 세율 구간과 납부세액에 따라 달라집니다.'
   },
   {
-    id: 'p3',
-    maskedName: '이○진 원장',
-    company: '강남 ○○의원 (전문의)',
-    logoText: 'MEDI',
-    logoColor: '#0f6f5c',
-    taxBase: '과세표준 3억 5천만원',
-    marginalRate: '44.0%',
-    totalRefund: '누적환급 9,680만원',
-    investSummary: '5월 종합소득세 신고 활용 · 4회 출자',
-    comment: '“종합소득세 신고 때마다 세율이 높아 고민이었는데, 미국채와 음악저작권 기반 벤처기업으로 분산 투자해 세금 환급과 자산 배분을 동시에 해결했습니다.”',
-    consentScope: '성만 표기 / 가운데 글자 ○ 처리 / 직종 표기 동의',
-    visible: true
-  },
-  {
-    id: 'p4',
-    maskedName: '박○우 님',
-    company: '현대자동차',
-    logoText: 'HYUNDAI',
-    logoColor: '#002c5f',
-    taxBase: '과세표준 9,500만원',
-    marginalRate: '38.5%',
-    totalRefund: '누적환급 3,465만원',
-    investSummary: '3,000만원 × 3개년 출자',
-    comment: '“소득공제 가능 금액과 예상 절세 효과를 확인한 뒤 투자 여부를 검토했습니다.”',
-    consentScope: '성만 표기 / 가운데 글자 ○ 처리 / 소속 기업명 동의',
-    visible: true
+    id: 'p3', maskedName: '전○희 님', company: '의사', logoText: '의사', logoColor: '#078322',
+    taxBase: '한계세율 38.5% 가정', marginalRate: '38.5%', totalRefund: '1,155만원',
+    investSummary: '국민성장펀드와 비교 후 벤처투자 소득공제 첫 투자',
+    comment: '“올해 5월 국민성장펀드를 보며 절세투자를 고민하다가 벤처투자 소득공제를 소개 받았어요. 비교해보니 소득공제 절세 효과가 컸고, 기업을 골라 투자할 수 있다는 점에 벤처투자를 결정했습니다.”',
+    consentScope: '콘티 예시 · 사실관계 및 게시 동의 확인 필요', visible: true,
+    detailMetrics: [['국민성장펀드 예상 절세액','462만원'], ['벤처투자 예상 절세액','1,155만원']],
+    detailNote: '각각 3천만원 투자, 한계세율 38.5% 유지 등을 가정한 단순 예시입니다. 실제 환급액은 개인별로 달라집니다.'
   }
 ];
 
-/* ②-2 그룹(기업)별 성공사례 (전산 집계 자동 반영) */
+/* 콘티상의 예시 수치: 실제 집계 및 게시 승인 확인 전 표시 */
 window.KVM_CASES_GROUP = [
-  {
-    id: 'g1',
-    company: 'SK하이닉스 임직원 그룹',
-    shortName: 'SK hynix',
-    logoColor: '#c6281f',
-    badge: '반도체 · 대기업',
-    count: '192건',
-    investAmount: '○○억원',
-    refundAmount: '○○억원',
-    avgRate: '평균 한계세율 38.5%~41.8%',
-    desc: '성과급 수령 시즌(1~2월) 및 연말 공제 한도 진단을 통한 임직원 단체·개별 누적 참여',
-    visible: true
-  },
-  {
-    id: 'g2',
-    company: '삼성 주요 계열사 임직원 그룹',
-    shortName: 'SAMSUNG',
-    logoColor: '#1428a0',
-    badge: '전자 · 금융 · IT',
-    count: '86건',
-    investAmount: '○○억원',
-    refundAmount: '○○억원',
-    avgRate: '평균 한계세율 38.5%~44.0%',
-    desc: '연말정산 소득공제 3,000만원~5,000만원 구간 중심 재출자 및 증액 출자 다수',
-    visible: true
-  },
-  {
-    id: 'g3',
-    company: '전문직 (의료·법조·세무) 그룹',
-    shortName: 'PRO GROUP',
-    logoColor: '#0f6f5c',
-    badge: '개원의 · 변호사 · 회계사',
-    count: '148건',
-    investAmount: '○○억원',
-    refundAmount: '○○억원',
-    avgRate: '평균 한계세율 41.8%~49.5%',
-    desc: '5월 종합소득세 신고 대비 고액 출자 및 공제시기 변경(2년 내 선택) 제도 적극 활용',
-    visible: true
-  },
-  {
-    id: 'g4',
-    company: '국내 주요 대기업·금융권 임직원 그룹',
-    shortName: 'CORP TOP',
-    logoColor: '#1e599a',
-    badge: '자동차 · 정유 · 금융',
-    count: '114건',
-    investAmount: '○○억원',
-    refundAmount: '○○억원',
-    avgRate: '평균 한계세율 38.5%',
-    desc: '찾아가는 파트너세션 및 월간 온라인 투자설명회를 통한 지속적 참여',
-    visible: true
-  }
+  {id:'g1',company:'SK하이닉스',shortName:'SK하이닉스',logoColor:'#fa7920',badge:'콘티 예시',count:'193명',investAmount:'89.2억원',refundAmount:'확인 필요',avgRate:'',desc:'콘티에 제시된 수치로 실제 집계 여부 확인이 필요합니다.',visible:true},
+  {id:'g2',company:'삼성',shortName:'삼성',logoColor:'#182fa8',badge:'콘티 예시',count:'63명',investAmount:'38.8억원',refundAmount:'확인 필요',avgRate:'',desc:'콘티에 제시된 수치로 실제 집계 여부 확인이 필요합니다.',visible:true},
+  {id:'g3',company:'한국수력원자력',shortName:'한국수력원자력',logoColor:'#1061ee',badge:'콘티 예시',count:'33명',investAmount:'16.8억원',refundAmount:'확인 필요',avgRate:'',desc:'콘티에 제시된 수치로 실제 집계 여부 확인이 필요합니다.',visible:true},
+  {id:'g4',company:'의사·약사',shortName:'의사·약사',logoColor:'#39813d',badge:'콘티 예시',count:'확인 필요',investAmount:'확인 필요',refundAmount:'확인 필요',avgRate:'',desc:'콘티에 수치가 기재되지 않았습니다.',visible:true},
+  {id:'g5',company:'현대',shortName:'현대',logoColor:'#008c1c',badge:'콘티 예시',count:'확인 필요',investAmount:'확인 필요',refundAmount:'확인 필요',avgRate:'',desc:'콘티에 수치가 기재되지 않았습니다.',visible:true},
+  {id:'g6',company:'LG',shortName:'LG',logoColor:'#ec57b1',badge:'콘티 예시',count:'확인 필요',investAmount:'확인 필요',refundAmount:'확인 필요',avgRate:'',desc:'콘티에 수치가 기재되지 않았습니다.',visible:true}
 ];
 
 /* ③ 절세이슈 뉴스 기사 (관리자 등록 · 3초 자동 전환 · 클릭 시 원문 링크) */
@@ -217,7 +142,7 @@ window.KVM_FAQ = [
  {c:'제도',q:'벤처투자 소득공제는 한도 없이 받을 수 있나요?',a:'아닙니다. 벤처투자 소득공제에는 종합소득금액의 50% 한도가 적용됩니다. 소득 규모에 따라 공제 가능한 금액이 달라지므로 투자 전 상담으로 확인하시기 바랍니다.',ok:1},
  // 국민성장펀드
  {c:'국민성장펀드',q:'국민성장펀드와 벤처투자 소득공제는 어떻게 다른가요?',a:'5,000만원을 투자했을 때 국민성장펀드의 소득공제는 1,600만원이고, 벤처투자는 4,400만원입니다. 벤처투자는 1,600만원만 투자해도 국민성장펀드 5,000만원 투자와 같은 공제 효과가 납니다. 국민성장펀드는 소득공제 최대 40%이며 종합한도 2,500만원에 포함되고, 5년 폐쇄형으로 중도환매가 불가합니다.',ok:1},
- {c:'국민성장펀드',q:'두 제도를 함께 활용하려면 어떻게 나누는 것이 좋나요?',a:'두 제도의 공제 요건과 투자 위험, 자금 회수 조건을 비교하고 개인의 소득과 투자 목적에 맞춰 판단해야 합니다. 국민성장펀드는 연 1억원, 5년 총 2억원 한도이며 금융소득종합과세 대상자는 가입할 수 없고 소득확인증명서가 필요합니다.',ok:1},
+ {c:'국민성장펀드',q:'두 제도를 함께 활용하려면 어떻게 나누는 것이 좋나요?',a:'두 제도의 공제 요건과 투자 위험, 자금 회수 조건을 비교하고 개인의 소득과 투자 목적에 맞춰 판단해야 합니다. 국민성장펀드는 세제혜택 전용계좌와 일반계좌의 가입 요건이 다릅니다. 금융소득종합과세 대상자는 전용계좌 세제혜택이 제한되지만 일반계좌 가입은 가능합니다. 구체적인 자격과 한도는 금융기관에 확인하세요.',ok:1},
  // 미국채
  {c:'미국채',q:'미국채 자산기업은 어떻게 운용하나요?',a:'만기 보유를 목적으로 운용하며 중도 환매는 없습니다. 금리 인하로 차익이 확정될 때만 매도를 검토합니다. 2026년 7월부터는 변동성이 높을 때 CMA에서 대기하고 매입 시점이 확실할 때 매입하는 "미국채 + CMA" 구조를 적용합니다.',ok:1},
  {c:'미국채',q:'미국채 매입 내역은 공개되나요?',a:'회차별로 매입일, 대상 조합, 매입 요청액 등을 투자자에게 공시합니다. 2026년 7월 기준 6회차까지 공시되었습니다.',ok:1},
