@@ -20,6 +20,9 @@
 <link rel="stylesheet" href="kvm-design.css?v=14">
 <link rel="stylesheet" href="kvm-motion.css?v=14">
 <link rel="stylesheet" href="kvm-refresh.css?v=1">
+<link rel="stylesheet" href="kvm-cases-refresh.css?v=1">
+<link rel="stylesheet" href="kvm-system-refresh.css?v=1">
+<link rel="stylesheet" href="kvm-sections-refresh.css?v=1">
 <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js')</script>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.kofund.co.kr/">
@@ -173,6 +176,12 @@
     </div>
 
     <!-- 2-2 그룹(기업)별 사례 -->
+    <div class="case-directory" id="case-directory">
+      <div class="case-directory-head"><div><h3>개인별 사례 찾아보기</h3><p>이름이나 직장명으로 사례를 검색할 수 있습니다.</p></div><label>사례 검색<input type="search" id="caseSearch" placeholder="이름 또는 직장명" autocomplete="off"></label></div>
+      <div class="case-filters" role="group" aria-label="사례 직군 선택"><button type="button" data-case-filter="전체" aria-pressed="true">전체</button><button type="button" data-case-filter="직장인" aria-pressed="false">직장인</button><button type="button" data-case-filter="전문직" aria-pressed="false">전문직</button></div>
+      <div class="case-table-wrap"><table><thead><tr><th>사례</th><th>소속·직군</th><th>출자 내용</th><th>누적 환급액</th></tr></thead><tbody id="caseDirectoryRows"></tbody></table></div><p id="caseEmpty" hidden>일치하는 사례가 없습니다.</p>
+    </div>
+
     <div id="cases-group" class="case-subblock" style="margin-top:64px">
       <div class="sub-head">
         <div>
@@ -993,6 +1002,7 @@
   </a>
 </nav>
 <script src="kvm-data-v2.js"></script>
+<script defer src="kvm-case-directory.js?v=1"></script>
 <script src="kvm-app-v2.js?v=14"></script>
 <script src="kvm-config.js?v=14"></script>
 <script type="module" src="kvm-site.js?v=14"></script>

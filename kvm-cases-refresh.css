@@ -1,0 +1,58 @@
+/* Storyboard pages 6–10: clear case panels, comparison figures and group cards. */
+#cases{background:#fff!important}
+#cases .sec-head-split,#issues .sec-head-split{align-items:end;padding-bottom:24px;border-bottom:1px solid #cddfe9}
+#cases .sec-head-split .lede,#issues .sec-head-split .lede{max-width:660px;color:#506878;line-height:1.75}
+#cases .case-subblock,#issues .case-subblock{margin-top:48px}
+#cases .sub-head,#issues .sub-head{align-items:center;gap:16px;margin-bottom:18px}
+#cases .sub-head h3,#issues .sub-head h3{color:#173b55;letter-spacing:-.03em}
+#cases .h-sub,#issues .h-sub{color:#607988;font-weight:500}
+#cases .cr-viewport,#issues .cr-viewport{border:1px solid #dce8ed!important;border-radius:6px!important;overflow:hidden}
+#cases .p-banner{grid-template-columns:minmax(180px,27%) minmax(0,1fr);min-height:315px;background:#f2f8f6!important}
+#cases .p-visual{background:#e5f2ee!important;box-shadow:none!important;color:#204f48}
+#cases .p-bg-logo{color:#447e70!important;opacity:.14}
+#cases .p-corp-chip{background:#fff!important;border:1px solid #c7dfd8;color:#17463d}
+#cases .p-anon-tag{color:#234b43;background:#fff}
+#cases .p-data{background:#f4f9f7!important;padding:32px 38px;gap:20px}
+#cases .p-headline{display:block}
+#cases .p-headline h4{margin:0 0 16px;color:#193d3b;font-size:26px!important}
+#cases .p-metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#cases .pm-box{background:#fff!important;border:1px solid #dcebe6;border-radius:4px!important;padding:16px 18px}
+#cases .pm-box span,#cases .pm-box small{color:#536d66}
+#cases .pm-box b{display:block;color:#173f39;font-size:20px!important}
+#cases .pm-box.hl b{color:#087849!important;font-size:clamp(24px,2.5vw,34px)!important}
+#cases .p-quote{margin:0;padding:16px 18px;background:#fff;border:0!important;color:#36564e;line-height:1.7}
+#cases .p-consent{color:#5f7971}
+#cases .iv-cases{gap:12px}
+#cases .iv-case{border:1px solid #d9e7ed;border-radius:4px!important;background:#fff;padding:20px;min-height:0;box-shadow:none!important}
+#cases .iv-case h4{margin:12px 0 4px!important;color:#183b55}
+#cases .iv-case .iv-no{color:#78a2b3}
+#cases .g-banner{grid-template-columns:minmax(210px,27%) minmax(0,1fr);background:#f4f8fb!important;min-height:250px}
+#cases .g-brand{background:#eaf2f8!important;padding:28px;color:#123c5c}
+#cases .g-stats{padding:28px;background:#f7fafc!important}
+#cases .g-stat-grid{gap:12px}
+#cases .gs-item{border:1px solid #dbe7ee;border-radius:4px!important;background:#fff!important;padding:18px;box-shadow:none!important}
+#cases .gs-item b{font-size:clamp(24px,2.4vw,32px)!important;color:#173f5c}
+#cases .gs-item.hl b{color:#0870a0!important}
+#cases .group-summary-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}
+#cases .gs-card{min-width:0;min-height:100px;text-align:left;border:1px solid #c9dce7!important;border-radius:4px!important;padding:16px;background:#fff!important;box-shadow:none!important}
+#cases .gs-card.on{border:2px solid #17699a!important;background:#f1f8fc!important}
+#cases .gs-txt{min-width:0}#cases .gs-txt b{color:#153c59}#cases .gs-txt span{white-space:normal;color:#496373;line-height:1.5}
+#cases .cr-controls,#issues .cr-controls{gap:8px}#cases .cr-btn,#issues .cr-btn{border:1px solid #cbdde7;background:#fff;color:#154463;min-width:44px;min-height:44px}
+#issues{background:#f4f8fa!important}
+#issues .iss-banner{grid-template-columns:minmax(250px,37%) minmax(0,1fr);background:#fff!important;min-height:280px}
+#issues .iss-img-wrap{height:100%;min-height:280px}
+#issues .iss-img-wrap img{width:100%;height:100%;object-fit:cover}
+#issues .iss-body{padding:32px 36px;background:#fff}
+#issues .iss-body h4{color:#153b56;font-size:clamp(21px,2vw,28px)!important;line-height:1.4}
+#issues .iss-body p{color:#4a6474;line-height:1.75}
+#issues .iss-cta{border:1px solid #c8dce6!important;border-radius:4px!important;color:#075e8c!important}
+#issues .iv-block{border-top:1px solid #d4e2e9;padding-top:48px}
+#issues .iv-bh h3{color:#173b55}
+#issues .iv-card{border-radius:4px!important;border:1px solid #d7e5ec!important;background:#fff!important;box-shadow:none!important}
+#issues .iv-step.is-next .iv-card{background:#e5f3fa!important;border-color:#8bbbd0!important}
+#issues .iv-card b{color:#153d58!important}
+@media(max-width:1020px){#cases .p-banner,#cases .g-banner,#issues .iss-banner{grid-template-columns:1fr}#cases .p-visual{min-height:150px}#cases .g-brand{display:grid}#issues .iss-img-wrap{height:240px;min-height:0}}
+@media(max-width:600px){#cases .sec-head-split,#issues .sec-head-split{padding-bottom:18px}#cases .p-data,#cases .g-stats,#issues .iss-body{padding:22px}#cases .p-metrics,#cases .g-stat-grid{grid-template-columns:1fr}#cases .group-summary-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}#cases .gs-card{padding:12px}#cases .iv-cases{grid-template-columns:repeat(2,minmax(0,1fr))}#issues .iss-img-wrap{height:190px}}
+@media(max-width:360px){#cases .group-summary-grid{grid-template-columns:1fr}}
+.case-directory{margin-top:64px;padding-top:42px;border-top:1px solid #d3e2e9}.case-directory-head{display:flex;align-items:end;justify-content:space-between;gap:24px}.case-directory h3{font-size:24px;color:#173b55}.case-directory-head p{color:#506878;margin-top:8px}.case-directory label{font-size:13px;font-weight:700;color:#173b55}.case-directory input{display:block;min-width:250px;height:46px;padding:0 14px;border:1px solid #bdcfda;background:#fff;border-radius:4px}.case-filters{display:flex;gap:8px;margin:20px 0}.case-filters button{min-height:44px;padding:8px 18px;background:#fff;border:1px solid #bdcfda;color:#24475f;border-radius:4px}.case-filters button[aria-pressed=true]{color:#fff;background:#14577c;border-color:#14577c}.case-table-wrap{overflow-x:auto}.case-directory table{width:100%;border-collapse:collapse;min-width:620px}.case-directory th{background:#153f5d;color:#fff;text-align:left;padding:14px}.case-directory td{border-bottom:1px solid #d9e5eb;padding:14px;color:#294b5d}.case-directory #caseEmpty{padding:20px;text-align:center;color:#506878}.hero .hero-cta .btn.ghost{color:#fff!important;border:1px solid rgba(255,255,255,.8)!important;background:rgba(5,30,46,.4)!important}
+@media(max-width:700px){.case-directory-head{display:block}.case-directory label{display:block;margin-top:18px}.case-directory input{width:100%;min-width:0}}

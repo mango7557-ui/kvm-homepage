@@ -1,0 +1,68 @@
+/* 투자기업·FAQ·경영원 소식·상담: 1차 콘티의 정돈된 표와 명확한 구분 */
+#companies{background:#f4f8fa!important}
+#companies .attr{width:100%;border-collapse:collapse;margin-top:38px;background:#fff;border-top:0}
+#companies .attr thead th{background:#123c59!important;color:#fff!important;font-weight:700;padding:17px 15px;border-color:#31556d}
+#companies .attr tbody td{border-bottom:1px solid #d7e5ec;padding:17px 15px;vertical-align:middle}
+#companies .attr tbody tr:nth-child(even){background:#f7fafb}
+#companies .sr-sub{margin:64px 0 0;font-size:26px!important}
+#companies .org{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:22px}
+#companies .co{min-width:0;min-height:330px;border-radius:6px!important;padding:27px!important;box-shadow:none!important;border:1px solid transparent;transition:transform .2s,border-color .2s}
+#companies .co:nth-child(1){background:#e2f2eb!important;border-color:#bfded1}
+#companies .co:nth-child(2){background:#e6f1f8!important;border-color:#c3dce9}
+#companies .co:nth-child(3){background:#fff2e3!important;border-color:#f0d8b9}
+#companies .co:nth-child(4){background:#fff!important;border-color:#d8e5eb}
+#companies .co:hover{transform:translateY(-2px);border-color:#33657c}
+#companies .co .kind{display:inline-block;align-self:flex-start;background:transparent!important;color:#31566a!important;padding:0!important;font-size:12px!important;font-weight:700}
+#companies .co h4{font-size:20px!important;color:#12394e;margin:16px 0 12px;line-height:1.35}
+#companies .co p{font-size:14px!important;line-height:1.75;color:#294b5d}
+#companies .co .rel{border-color:rgba(26,70,90,.18);font-size:12px!important;line-height:1.65;color:#496778}
+#companies .co .go{color:#07567c;font-size:13px!important;line-height:1.5;gap:8px}
+#companies .co .st{background:#fff!important;color:#3e6172!important;font-size:11px}
+#companies .sel{margin-top:48px;gap:14px}
+#companies .sel .card{border-radius:6px!important;background:#fff!important;border:1px solid #dbe7ed!important;padding:30px!important}
+#companies .pf,#companies .arch{margin-top:64px}
+#companies .pf-grid>div,#companies .arch-grid .pc{border-radius:5px!important;background:#fff!important;border:1px solid #dbe7ed!important;box-shadow:none!important}
+#companies .node.gp{border-radius:6px!important;background:#e4f0f5!important;box-shadow:none!important}
+#faq{background:#fff!important}
+#faq .faq-head{align-items:flex-end;padding-bottom:30px;border-bottom:2px solid #173e57}
+#faq .faq-tools{margin:26px 0 18px}
+#faq .search{background:#f5f9fb!important;border:1px solid #d4e4ec!important;border-radius:4px!important;min-height:48px}
+#faq .faq-list{border-top:1px solid #aec4d0}
+#faq .faq-list details{border-radius:0!important;border-bottom:1px solid #d8e5eb!important;background:#fff!important;box-shadow:none!important}
+#faq .faq-list details[open]{background:#f4f9fb!important}
+#faq .faq-list summary{min-height:76px;padding:20px 18px;font-weight:700;color:#143d55}
+#faq .faq-list .ans{line-height:1.85;color:#355365}
+#faq .faq-list summary .cat{background:#e8f3f8!important;border-radius:3px;color:#075c84!important}
+#news{background:#f2f7f9!important}
+#news .news-grid{gap:14px}
+#news .news-grid>.card{background:#fff!important;border:1px solid #dbe7ed!important;border-radius:6px!important;box-shadow:none!important;padding:28px!important}
+#news .news-grid>.card:first-child{background:#123c59!important;color:#fff!important;border-color:#123c59!important}
+#news .news-grid>.card:first-child h4,#news .news-grid>.card:first-child p,#news .news-grid>.card:first-child label,#news .news-grid>.card:first-child li{color:#fff!important}
+#news .news-grid>.card:first-child input{color:#123c59!important;background:#fff!important}
+#news .feed{margin-top:60px}
+#news .feed-h{border-bottom:2px solid #173e57;padding-bottom:17px}
+#news .press{padding:0!important;background:#fff!important;border-radius:0!important}
+#news .press li{padding:20px!important;border-bottom:1px solid #dbe7ed}
+#news .soc-grid .soc{border-radius:6px!important}
+#news .soc-bar{border-radius:4px!important;background:#fff!important;backdrop-filter:none!important}
+#about{background:#fff!important}
+#about .ans-grid{border-radius:6px!important;box-shadow:none!important;background:#edf6fa!important;padding:clamp(26px,4vw,52px)!important}
+#about .ans-q{line-height:1.35;color:#123c59}
+#about .ans-a p{line-height:1.85}
+#about .iv-bh{margin-bottom:24px;border-bottom:2px solid #173e57}
+#about .iv-lead,#about .iv-p{border-radius:6px!important;box-shadow:none!important}
+#about .iv-lead{background:#143f5a!important}
+#about .iv-p{background:#f5f9fb!important;border:1px solid #dce8ed!important}
+#contact{background:#eef5f8!important}
+#contact .cx-grid{gap:18px}
+#contact .cx-form{background:#fff!important;border:1px solid #dbe7ed!important;border-radius:6px!important;box-shadow:none!important;padding:clamp(24px,3vw,40px)!important}
+#contact .cx-form fieldset+fieldset{border-top:1px solid #e0eaf0;padding-top:22px;margin-top:22px}
+#contact .cx-fld input,#contact .cx-fld textarea{border-radius:4px!important;border-color:#c7dce6!important;background:#fbfdfe!important}
+#contact .cx-card,#contact .cx-map{border-radius:6px!important;box-shadow:none!important}
+#contact .cx-card{background:#123c59!important;color:#fff!important}
+#contact .cx-card::before,#contact .cx-card::after{display:none!important}
+#contact .cx-quick a{border-radius:4px!important}
+#contact .cx-addr{border-radius:4px!important;backdrop-filter:none!important}
+@media(max-width:1000px){#companies .org{grid-template-columns:repeat(2,minmax(0,1fr))}#companies .co{min-height:0}}
+@media(max-width:700px){#companies .org{grid-template-columns:minmax(0,1fr)}#companies .co{padding:22px!important}#companies .attr{font-size:12px}#companies .attr th,#companies .attr td{padding:10px 7px}#faq .faq-head{padding-bottom:20px}#faq .faq-list summary{padding:16px 12px;min-height:68px}#news .news-grid>.card{padding:22px!important}#about .iv-people{grid-template-columns:1fr 1fr}#contact .cx-form{padding:22px!important}}
+@media(max-width:380px){#about .iv-people{grid-template-columns:1fr}}

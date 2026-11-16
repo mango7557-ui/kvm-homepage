@@ -1,0 +1,35 @@
+/* Storyboard: a clear navy-and-white reference for the deduction and calculator. */
+#system-intro{background:#fff!important;color:#17354b}
+#system-intro .sys-sub-sep{margin-top:88px;padding-top:72px;border-top:1px solid #d3e0e7}
+#system-intro .v-flow{gap:0;align-items:stretch;margin-top:30px}
+#system-intro .v-node{border:1px solid #cfdee7!important;background:#f7fafc!important;border-radius:0!important;box-shadow:none!important;padding:26px}
+#system-intro .v-node.end{background:#e9f4f9!important}
+#system-intro .v-node h4{color:#123b59!important}
+#system-intro .instr .card,#system-intro .tax-grid .card,#system-intro .law .card,#system-intro .limit{border:1px solid #d7e3e9!important;border-radius:0!important;box-shadow:none!important;background:#f8fafb!important}
+#system-intro .tax-grid,#system-intro .vs{gap:32px}
+#system-intro table{width:100%;border-collapse:collapse;border:1px solid #d7e2e8;background:#fff}
+#system-intro table thead th{background:#143d5e!important;color:#fff!important;padding:16px 12px;border:0!important}
+#system-intro table tbody td{padding:14px 12px;border-bottom:1px solid #e1e9ee}
+#system-intro table tbody tr.me td{background:#e7f2f8!important;color:#074f79!important}
+#system-intro .brk-bar>div{border-radius:0!important}#system-intro .brk-bar .b1{background:#075d88!important;color:#fff!important}#system-intro .brk-bar .b2{background:#4286a8!important;color:#fff!important}#system-intro .brk-bar .b3{background:#a4cadb!important;color:#17354b!important}
+#system-intro .law blockquote{background:#eef3f5!important;border-left:3px solid #194969!important;color:#17354b!important;padding:24px!important}
+#system-intro .vs-table thead th.g,#system-intro .vs-table thead th.l{background:#143d5e!important;color:#fff!important}
+#simulator{background:#edf3f6!important;color:#17354b}
+#simulator .sim-box{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.8fr);gap:0;border:1px solid #cadbe4;border-radius:0!important;overflow:hidden;box-shadow:none!important;background:#fff}
+#simulator .sim-in{background:#f6f8fa!important;padding:38px!important}
+#simulator .sim-out{background:#123d5b!important;color:#fff!important;padding:38px!important;border-radius:0!important}
+#simulator .presets{gap:8px}#simulator .presets button{background:#fff!important;color:#24445b!important;border:1px solid #c9d8e1!important;border-radius:3px!important;min-height:48px!important}
+#simulator .presets button.on{background:#14577c!important;color:#fff!important;border-color:#14577c!important}
+#simulator .sim-out .note,#simulator .sim-out .sim-txt,#simulator .sim-out span{color:#e0edf3!important}
+#simulator .out-big b{font-size:clamp(38px,4vw,56px)!important;letter-spacing:-.03em}
+#simulator .out-list>div{border-color:rgba(255,255,255,.25)!important}
+@media(max-width:800px){#system-intro .v-flow{display:flex;flex-direction:column}#system-intro .v-arrow{min-height:24px}#system-intro table{font-size:13px}#system-intro table thead th,#system-intro table tbody td{padding:10px 8px}#simulator .sim-box{grid-template-columns:1fr}#simulator .sim-in,#simulator .sim-out{padding:24px!important}}
+/* Contrast and storyboard investment-method and sitemap treatment. */
+.hero .hero-veil{background:linear-gradient(90deg,rgba(5,25,39,.94),rgba(8,32,49,.72) 54%,rgba(8,32,49,.30))!important}
+.kc-nudge{display:none!important}
+#direct-invest{background:#fff!important;color:#17354b}
+#direct-invest .direct-vs,#direct-invest .direct-steps .v-node,#direct-invest .card{border-radius:0!important;box-shadow:none!important;border:1px solid #d7e3e9!important;background:#f8fafb!important}
+#direct-invest table{border-collapse:collapse;width:100%}#direct-invest table th{background:#153f5d!important;color:#fff!important;padding:16px 12px}#direct-invest table td{border-bottom:1px solid #dce7ed;padding:15px 12px}
+#direct-invest .direct-steps .v-node{padding:24px!important}#direct-invest .direct-steps .v-node h4{color:#143d59!important}
+footer{background:#15384f!important}footer .site-links{border-color:#7391a2!important}
+@media(max-width:800px){#direct-invest table{font-size:13px}#direct-invest table th,#direct-invest table td{padding:10px 8px}}
